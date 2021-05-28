@@ -27,9 +27,10 @@ login(){
           settoken(data.token)
           wx.showToast({
             title: '登录成功',
+
           })
           wx.switchTab({
-            url: '/',
+            url: '../../pages/index/index',
           })
         }else{
           wx.showToast({
@@ -40,21 +41,15 @@ login(){
           })
         }
       }
-  
-     
-       
     }
    })
-  
 },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
-
   /**
    * 生命周期函数--监听页面显示
    */
