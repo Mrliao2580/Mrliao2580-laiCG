@@ -1,0 +1,175 @@
+.mine-box{
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+}
+.mine-top{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  height: 90rpx;
+  background:#fc517e;
+  line-height: 90rpx;
+}
+.top-left  , .img{
+  margin-top:10rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+.top-center{
+  font-size:37rpx;
+  color:white;
+}
+.entry-box{
+  width: 100%;
+  height: 300rpx;
+  background: #fc517e;
+}
+.entry-logo{
+  text-align: center;
+  width: 100%;
+  height: 180rpx;
+}
+.entry-logo .img{
+  margin:4rpx 0;
+  height:170rpx;
+  width: 170rpx;
+}
+.entry-btn{
+  width: 100%;
+  height: 100rpx;
+  background-color: #fc517e;
+
+}
+.btn-box{
+  margin:10rpx auto;
+  display:flex;
+  width: 400rpx;
+  height: 100rpx;
+}
+.btn-box .btn{
+  font-size:40rpx;
+  color:white;
+  margin: 0;
+  width: 200rpx;
+  height: 100rpx;
+  background:#fc517e;
+}
+.mine-menu{
+  width: 100%;
+  height: 224rpx;
+  margin-top: 10rpx;
+  background-color: #ccc;
+}
+.menu-box{
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70rpx;
+  background:white;
+  line-height: 70rpx;
+  border-bottom:1rpx #eaeaea solid;
+}
+.menu-left{
+  display: flex;
+  width: 300rpx;
+  height: 60rpx;
+}
+.menu-right{
+  display: flex;
+  width: 244rpx;
+  height: 60rpx;
+}
+.menu-right .img{
+  margin:18rpx 0 0 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.menu-left .img{
+  margin:6rpx 10rpx 0 0 ;
+  width: 60rpx;
+  height: 60rpx;
+}
+.menu-right text{
+  line-height: 60rpx;
+}
+.pay-box{
+  display: flex;
+  width: 100%;
+  height: 146rpx;
+  background:white;
+}
+.pay{
+  width:190rpx;
+  height:150rpx;
+  text-align:center;
+}
+.pay image{
+  width: 90rpx;
+  height: 90rpx;
+}
+.wenzi{
+  font-size:28rpx;
+  color:#878581;
+}
+.menoy-box{
+  width: 100%;
+  height: 194qrpx;
+  background-color: #ccc;
+}
+.menoy-top{
+  width: 100%;
+  height: 80rpx;
+  background:white;
+  display: flex;
+  line-height:80rpx;
+  border-bottom:1rpx solid#eaeaea;
+
+}
+.menoy-top image{
+  margin:15rpx 10rpx 0 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.menoy-xuanxiang{
+  display:flex;
+  width: 120%;
+  height:110rpx;
+  background:white;
+}
+.xuanxiang{
+  text-align:center;
+  line-height: 110rpx;
+  width: 190rpx;
+  height: 110rpx;
+}
+.xuanx{
+  width: 100%;
+  height: 458rpx;
+  background:white;
+  margin-top: 15rpx;
+}
+.xuanx-box{
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 90rpx;
+  border-bottom:1rpx solid #eaeaea;
+}
+.xuanx-left{
+  height: 90rpx;
+  line-height:90rpx;
+  display: flex;
+}
+.xuanx-box image{
+  margin: 10rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+.miaosu{
+  margin-top:10rpx;
+  width: 100%;
+  height: 200rpx;
+  text-align:center;
+  line-height: 200rpx;
+}

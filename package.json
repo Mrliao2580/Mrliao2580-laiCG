@@ -1,0 +1,23 @@
+{
+  "name": "Mrliao2580-laiCG",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mrliao2580/Mrliao2580-laiCG.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mrliao2580/Mrliao2580-laiCG/issues"
+  },
+  "homepage": "https://github.com/Mrliao2580/Mrliao2580-laiCG#readme",
+  "dependencies": {
+    "@miniprogram-component-plus/tabs": "^1.0.0"
+  }
+}

@@ -1,11 +1,12 @@
-// pages/shopCar/shopCar.js
+const {getuser,getlogin,getphone} = require('../../api/loginapi')
+const {gettoken,settoken} = require('../../utils/util')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    loginCode:[]
   },
 
   /**
@@ -14,6 +15,38 @@ Page({
   onLoad: function (options) {
 
   },
+login(){
+  wx.login({
+    async success(res){
+      console.log(res)
+      console.log(res.code)
+          let data = await getlogin(res.code)
+          let token = data.token
+      if(res.code){
+        if(token){
+          settoken(data.token)
+          wx.showToast({
+            title: '登录成功',
+          })
+          wx.switchTab({
+            url: '/',
+          })
+        }else{
+          wx.showToast({
+            title: '登录失败',
+          })
+          wx.switchTab({
+            url: '/pages/login/login',
+          })
+        }
+      }
+  
+     
+       
+    }
+   })
+  
+},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -40,7 +73,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
   },
 
   /**

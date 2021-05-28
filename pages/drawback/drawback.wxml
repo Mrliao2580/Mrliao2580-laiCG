@@ -1,0 +1,13 @@
+<view class="tuihuo-box">
+  <image src=""></image>
+<mp-tabs 
+  tabs="{{tabs}}" 
+  activeTab="{{index}}" 
+  swiperClass="weui-tabs-swiper"
+  bindtabclick="onTabClick"
+  bindchange="onChange"
+  activeClass="tab-bar-title__selected"
+>
+</mp-tabs>
+  <image src="/picture/home.png"></image>
+</view>

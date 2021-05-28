@@ -1,0 +1,14 @@
+.tuihuo-box{
+  display: flex;
+  justify-content: space-between;
+}
+.tuihuo-box image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.weui-tabs-bar__item{
+  margin-right:15rpx;
+}
+weui-tabs-bar__title text{
+  font-size:30rpx;
+}

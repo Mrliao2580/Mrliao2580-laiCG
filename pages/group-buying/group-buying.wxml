@@ -1,0 +1,25 @@
+<!-- 团购页面 -->
+
+<view class="box">
+  <mp-tabs 
+  tabs="{{tabs}}" 
+  activeTab="{{index}}" 
+  bindtabclick="onTabClick"
+  tab-active-text-color="#fe4070"
+  tab-underline-color="false"
+  bindchange="onChange"
+  activeClass="tab-bar-title__selected"
+>
+</mp-tabs>
+<block wx:if="{{xiabiao == 0}}">
+ <shopping shop="{{tuangou}}"></shopping>
+</block>
+<block wx:if="{{xiabiao == 1}}">
+ <view>1111</view>
+</block>
+<block wx:if="{{xiabiao == 2}}">
+</block>
+<block wx:if="{{xiabiao == 3}}">
+ <view>333</view>
+</block>
+</view>

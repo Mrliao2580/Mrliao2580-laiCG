@@ -1,9 +1,13 @@
 {
   "pages":[
-    "pages/index/index",
+    "pages/qinshe/qinshe",
+    "pages/group-buying/group-buying",
+    "pages/mine/mine",
+    "pages/login/login",
+    "pages/menu/menu",
     "pages/spell/spell",
-    "pages/shopCar/shopCar",
-    "pages/user/user"
+    "pages/drawback/drawback"
+   
 
     
   ],

@@ -14,6 +14,14 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 
+const TOKEN = 'token';
+const gettoken = (token)=>{
+  return wx.getStorageSync(TOKEN)
+}
+const settoken = (token)=>{
+   wx.setStorageSync(TOKEN,token)
+}
+
 module.exports = {
-  formatTime
+  formatTime,gettoken,settoken
 }
