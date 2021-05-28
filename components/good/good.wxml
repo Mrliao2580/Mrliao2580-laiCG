@@ -1,0 +1,16 @@
+  <!-- 商品介绍 -->
+  <view class="goodsDetail" bindtap="detailPag" data-goods_id="{{goodsData.goods_id}}">
+    <view class="makeUp">
+      <image src="{{goodsData.gs_img}}" lazy-load></image>
+      <view class="goods">
+        <text class="title">{{goodsData.title}}</text>
+        <view class="goodsBottom">
+          <view class="money">
+            <text class="realTime"><text class="symbol">￥</text>{{goodsData.jumei_price}}</text>
+            <text class="beforeTime"> ￥{{goodsData.market_price}}</text>
+          </view>
+          <view class="asses">10条评论</view>
+        </view>
+      </view>
+    </view>
+  </view>

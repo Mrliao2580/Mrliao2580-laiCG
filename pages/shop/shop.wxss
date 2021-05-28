@@ -1,0 +1,43 @@
+@import "../../assets/css/icon.wxss";
+.searchBox {
+ display: flex;
+ justify-content:center;
+ margin: 20rpx;
+ margin-left: 0;
+}
+
+.searchBox .search{
+  flex: 1;
+}
+
+.searchBox text{
+  line-height: 108rpx;
+}
+
+/* 热门搜索  */
+.popluar{
+  margin: 40rpx;
+  margin-top: 0;
+  font-size: 28rpx;
+}
+
+.popluar .popTtile{
+  color: #ccc;
+  margin-bottom: 10rpx;
+}
+
+.popluar .recommGoods{
+  display: flex;
+ flex-wrap: wrap;
+}
+.popluar .recommGoods .good{
+  padding: 8rpx 20rpx 8rpx 20rpx;
+  background: #f5f5f5;
+  margin:10rpx 15rpx 20rpx 0rpx;
+  border-radius: 120rpx;
+  color: #333;
+}
+
+.history {
+  margin-top: 40rpx;
+}

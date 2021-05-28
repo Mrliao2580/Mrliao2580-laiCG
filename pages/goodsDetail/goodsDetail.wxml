@@ -1,0 +1,141 @@
+<!-- 商品图片 -->
+<view class="imgBox">
+  <image class="headerImg" src="http://mp6.jmstatic.com/product/005/179/5179236_std/5179236_1000_1000.jpg?v=1619165510&imageView2/2/w/800/q/90"></image>
+  <image class="absImg" src="http://p0.jmstatic.com/banner/area/000/000/020.jpg"></image>
+</view>
+<!-- 商品价格 -->
+<view class="normalShow">
+  <view class="price_info">
+    <view class="price-box">
+      <text class="cur_price">￥98</text>
+      <text class="cost_price">￥198</text>
+      <text class="detail_text">已含税</text>
+    </view>
+    <text class="buy">376人已购买</text>
+  </view>
+  <text class="count_down">还剩33天13:9:52</text>
+</view>
+<view class="normal_desc">美国RCMA进口无色透明定妆粉散粉蜜粉底胡椒粉持久定妆85g</view>
+<!-- 运费 -->
+<view class="postage-wrap">
+  <view class="postageBox">
+    <text class="postage-type">运费</text>
+    <text class="postage-content">单商家订单满169元包邮</text>
+    <i class="iconfont icon-youjiantou"></i>
+  </view>
+  <!-- 说明 -->
+  <view class="introduction-wrap">
+    <!-- 未展开 -->
+    <view class="introduction-content" wx:if="{{isShow}}">
+      <text class="introduction-type">说明</text>
+      <i class="iconfont icon-dagou icon1"></i>
+      <text class="condition">不支持退货</text>
+      <i class="iconfont icon-dagou icon2"></i>
+      <text class="condition">支持分期</text>
+      <i class="iconfont icon-youjiantou" bindtap="isShows"></i>
+    </view>
+    <!-- 展开 -->
+    <view class="introduction-content introduction-list" wx:else="{{isShow}}">
+      <view class="introduction-list-content">
+        <text class="introduction-list-type">说明</text>
+        <text  class="introduction-list-world">可详情阅读以下商品说明</text>
+        <i class="iconfont icon-shangjiantou" bindtap="isShows"></i>
+      </view>
+      <view class="introduction-list-title introduction-border">
+        <view class="content">
+          <i class="iconfont icon-dagou"></i>
+          <text class="description">不支持退货</text>
+          <view class="realPay">本商品不支持退货</view>
+        </view>
+      </view>
+      <view class="introduction-list-title">
+        <view class="content">
+          <i class="iconfont icon-dagou"></i>
+          <text class="description">支持分期</text>
+          <view class="realPay">实际计算金额满150以上支持分期购买</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 商品sku -->
+<view class="page_sku_wrapper"  bindtap="isShowMask">
+  <text class="title_name">请选择</text>
+  <text class="selected_val">分类</text>
+  <i class="iconfont icon-youjiantou"></i>
+</view>
+<!-- sku遮罩层 -->
+<view class="mskLayer"  bindtap="shutDown" wx:if="{{isShowMask}}"  bubbles>
+  <!--  -->
+  <view class="skuLayer" catchtap="myDetail">
+    <view class="sku-contnet">
+      <image src="http://mp6.jmstatic.com/product/002/163/2163502_spu_normal/2163502_800_800.jpg?imageView2/2/w/320/q/90"></image>
+      <view class="product_info">
+        <view class="price">￥52</view>
+        <view class="selected_product">
+          <text class="select">请选择</text>
+          <text>分类</text>
+        </view>
+      </view>
+      <i class="iconfont icon-cha" bindtap="shutDown" ></i>
+    </view>
+    <scroll-view scroll-y class="goodScr">
+      <!-- 分类 -->
+      <view class="select_item_box ">
+        <view class="select_item">
+          <text class="property_title">分类</text>
+          <view class="property_name">
+            <text class="prop_val">30ml*3</text>
+            <text class="prop_val">30ml</text>
+          </view>
+        </view>
+        <view class="select_item">
+          <text class="property_title">分类</text>
+          <view class="property_name">
+            <text class="prop_val">30ml*3</text>
+            <text class="prop_val">30ml</text>
+          </view>
+        </view>
+      </view>
+      <view class="buy_num ">
+        <text>购买数量</text>
+        <van-stepper value="{{ 1 }}" bind:change="onChange" />
+      </view>
+    </scroll-view>
+    <view class="submit_confirm_box">
+      <text class="submit multi_submit">加入购物车</text>
+      <text class="submit mast_submit">立刻购买</text>
+    </view>
+  </view>
+</view>
+<!-- tab-box -->
+
+<van-tabs active="{{ active }}" bind:change="onChange"  class="tab-box">
+  <van-tab title="图文详情" class="imgDetail">
+   <view class="imgs">
+    <image src="http://p12.jmstatic.com/global/image/202005/15/1589516217.5426.jpg"></image>
+   </view>
+  </van-tab>
+  <van-tab title="商品参数" class="contentDetail">
+    <view class="contentList">
+      <text class="goodsName">商品名称</text>
+      <text class="googsContent">AHC玻尿酸B5洗面奶180 ML</text>
+    </view>
+  </van-tab>
+  <van-tab title="评价" class="tuwen-box">
+    <view class="high-percent">92.9<text>%  好评</text></view>
+    <view class="unTip" >
+      <block wx:for="{{userComment}}" wx:key="index">
+        <block wx:if="{{index == commentIndex}}" >
+          <text class="all bgc"  bindtap="getItem" data-index="{{index}}">{{item}}</text>
+        </block>
+        <block wx:else>
+          <text class="all" bindtap="getItem" data-index="{{index}}">{{item}}</text>
+        </block>
+      </block>
+    </view>
+  </van-tab>
+  
+</van-tabs>
+
+
