@@ -1,10 +1,11 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/spell/spell",
-    "pages/shopCar/shopCar",
-    "pages/user/user"
-
+    "pages/shop/shop",
+    "pages/login/login",
+    "pages/group/group",
+    "pages/shopping/shopping",
+    "pages/goodsDetail/goodsDetail"
     
   ],
   "window":{
@@ -13,6 +14,33 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle":"black"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/public/image/jm-home.png",
+      "selectedIconPath": "/public/image/jm-home1.png"
+    },
+    {
+      "pagePath": "pages/group/group",
+      "text": "拼团",
+      "iconPath": "/public/image/jm-group.png",
+      "selectedIconPath": "/public/image/jm-group1.png"
+    },
+    {
+      "pagePath": "pages/shopping/shopping",
+      "text": "拼团",
+      "iconPath": "/public/image/jm-shopping.png",
+      "selectedIconPath": "/public/image/jm-shopping1.png"
+    },
+    {
+      "pagePath": "pages/login/login",
+      "text": "拼团",
+      "iconPath": "/public/image/jm-my.png",
+      "selectedIconPath": "/public/image/jm-my1.png"
+    }
+  ],
+  "selectedColor":"#fe4070"
+  }
 }

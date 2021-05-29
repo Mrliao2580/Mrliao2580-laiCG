@@ -1,0 +1,57 @@
+/* components/good/good.wxss */
+/* 商品介紹 */
+
+.goodsDetail{
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.goodsDetail .makeUp{
+  position: relative;
+}
+
+.goodsDetail .makeUp image{ 
+  width: 100%;
+  height: 248rpx;
+}
+
+.goodsDetail .makeUp .goods{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  height: 100%;
+  top: 0;
+  right: 20rpx;
+  width: 428rpx;
+  overflow: hidden;
+}
+
+.goodsDetail .makeUp .goods .title{
+  color: #333;
+  font-size: 26rpx;
+}
+
+.goodsDetail .makeUp .goods .goodsBottom .money{
+  color: #fe4070;
+}
+
+.goodsDetail .makeUp .goods .goodsBottom .money .realTime {
+  font-size: 48rpx;
+}
+
+.goodsDetail .makeUp .goods .goodsBottom .money .realTime .symbol{
+  font-size: 24rpx;
+}
+.goodsDetail .makeUp .goods .goodsBottom .money .beforeTime{
+  color: #ccc;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  text-decoration: line-through;
+}
+
+.goodsDetail .makeUp .goods .goodsBottom .asses{
+    color: #999;
+    font-size: 11px;
+}

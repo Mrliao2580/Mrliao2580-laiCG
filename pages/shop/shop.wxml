@@ -1,0 +1,37 @@
+<view class="searchBox">
+  <van-search bind:search="textValue" placeholder="搜索商品"  class="search"/>
+  <text>搜索</text>
+</view>
+<!-- 热门搜索 -->
+<view class="popluar">
+  <view class="popTtile">
+    <i class="iconfont icon-shizhong"></i>
+    热门搜索
+  </view>
+  <!-- 热门搜索商品 -->
+  <view class="recommGoods">
+    <view class="good">口红</view>
+    <view class="good">面膜</view>
+    <view class="good">洗面奶</view>
+    <view class="good">防嗮喷雾</view>
+    <view class="good">香水</view>
+    <view class="good">眼影</view>
+  </view>
+</view>
+
+<view style="border:10rpx solid #f1f1f1"></view>
+
+<!-- 历史记录 -->
+<view class="popluar history">
+  <view class="popTtile">
+    <i class="iconfont icon-shizhong"></i>
+    历史搜索
+  </view>
+  <!-- 热门搜索商品 -->
+  <view class="recommGoods" >
+    <block wx:for="{{goods}}" wx:key="index">
+      <view class="good">{{item}}</view>
+    </block>
+  </view>
+</view>
+
