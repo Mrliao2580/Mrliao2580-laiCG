@@ -21,6 +21,12 @@
         {
           "name": "pages/shopping/shopping",
           "pathName": "pages/shopping/shopping",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "legend",
+          "pathName": "pages/legend/legend",
           "scene": null
         }
       ]

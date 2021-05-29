@@ -73,5 +73,13 @@ Page({
     this.setData({
       swipImg : message
     })
+  },
+
+  // 海外直供
+  ulClear(e){
+    let {index} = e.currentTarget.dataset;
+    wx.navigateTo({
+      url: `/pages/legend/legend?index=${index}`,
+    })
   }
 })
