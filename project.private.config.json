@@ -11,8 +11,7 @@
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
+      "list": [{
           "name": "goodsdetail",
           "pathName": "pages/goodsDetail/goodsDetail",
           "query": "",
@@ -21,6 +20,12 @@
         {
           "name": "pages/shopping/shopping",
           "pathName": "pages/shopping/shopping",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "legend",
+          "pathName": "pages/legend/legend",
           "scene": null
         }
       ]
