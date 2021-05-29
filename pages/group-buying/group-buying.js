@@ -1,11 +1,14 @@
-// pages/user/user.js
+
+import { gettuangou } from '../../api/loginapi'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+      tabs:[],
+      tuangou:{},
+      xiabiao:''
   },
 
   /**
@@ -13,6 +16,44 @@ Page({
    */
   onLoad: function (options) {
 
+    const tabs = [
+     
+      {
+        title: '推荐',
+       
+      },
+      {
+        title:"美妆",
+       
+      },
+      {
+        title:"母婴健康",
+       
+      },
+      {
+        title:"下期预告",
+     
+      }
+    ]
+    this.setData({ tabs })
+    this.gettuan()
+  },
+  onChange(e){
+    let {detail} = e.detail
+    let {index} = e.detail
+    console.log(index)
+    this.setData({
+         xiabiao:index
+    })
+  },
+  onTabClick(e){
+  },
+  async gettuan(){
+    let {data} = await gettuangou()
+    console.log(data)
+    this.setData({
+      tuangou:data
+    })
   },
 
   /**

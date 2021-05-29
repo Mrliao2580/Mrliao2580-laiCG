@@ -1,0 +1,18 @@
+<view class="shop-box" wx:for="{{shop}}">
+ <view class="shop-img">
+   <view class="shop-pinlun">{{item.buyer_number_text}}</view>
+   <image src="{{item.image}}"></image>
+ </view>
+ <view class="shop-miaosu">
+     <text class="shop-tuan">{{item.group_name_tag}}</text>
+     <text>{{item.short_name}}</text>
+ </view>
+ <view class="shop-price">
+   <view class="qian">
+     <text class="tuanjia">{{item.jumei_price}}</text>
+     <text class="danmai">{{item.single_price}}</text>
+   </view>
+   <view class="btn-box"><button class="btn">去开团</button></view>
+   
+ </view>
+</view>

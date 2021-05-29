@@ -1,6 +1,4 @@
 @import "/assets/css/icon.wxss";
-page{
-}
 .header{
   height: 100%;
   position: relative;

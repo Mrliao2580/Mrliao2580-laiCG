@@ -1,8 +1,14 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/shop/shop",
+    "pages/qinshe/qinshe",
+    "pages/group-buying/group-buying",
+    "pages/mine/mine",
     "pages/login/login",
+    "pages/menu/menu",
+    "pages/spell/spell",
+    "pages/drawback/drawback",
+    "pages/shop/shop",
     "pages/group/group",
     "pages/shopping/shopping",
     "pages/goodsDetail/goodsDetail",
@@ -30,13 +36,13 @@
     },
     {
       "pagePath": "pages/shopping/shopping",
-      "text": "拼团",
+      "text": "购物车",
       "iconPath": "/public/image/jm-shopping.png",
       "selectedIconPath": "/public/image/jm-shopping1.png"
     },
     {
-      "pagePath": "pages/login/login",
-      "text": "拼团",
+      "pagePath": "pages/mine/mine",
+      "text": "个人中心",
       "iconPath": "/public/image/jm-my.png",
       "selectedIconPath": "/public/image/jm-my1.png"
     }

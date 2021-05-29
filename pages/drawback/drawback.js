@@ -1,55 +1,42 @@
-const {getuser,getlogin,getphone} = require('../../api/loginapi')
-const {gettoken,settoken} = require('../../utils/util')
+// pages/drawback/drawback.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    loginCode:[]
+      tabs:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      const tabs = [
+        {
+          title:"退货进度"
+        },
+        {
+          title:"申请退货"
+        }
+      ]
+      this.setData({
+        tabs
+      })
+  },
+  onChange(e){
+    console.log('点击',e)
+  },
+  onTabClick(e){
 
   },
-login(){
-  wx.login({
-    async success(res){
-      console.log(res)
-      console.log(res.code)
-          let data = await getlogin(res.code)
-          let token = data.token
-      if(res.code){
-        if(token){
-          settoken(data.token)
-          wx.showToast({
-            title: '登录成功',
-
-          })
-          wx.switchTab({
-            url: '../../pages/index/index',
-          })
-        }else{
-          wx.showToast({
-            title: '登录失败',
-          })
-          wx.switchTab({
-            url: '/pages/login/login',
-          })
-        }
-      }
-    }
-   })
-},
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+
   },
+
   /**
    * 生命周期函数--监听页面显示
    */
@@ -68,6 +55,7 @@ login(){
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+
   },
 
   /**

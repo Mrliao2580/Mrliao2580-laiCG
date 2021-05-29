@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "good-com":"/components/good/good"
-  },
-  "navigationBarTitleText":"聚美优品+"
+    "good-com":"../../components/good/good"
+  }
 }
