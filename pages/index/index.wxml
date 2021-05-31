@@ -71,8 +71,8 @@
     <text>今日团购，1每天10点上新</text>
   </view>
   <!-- 商品介绍 -->
-  <view class="goodsDetail" wx:for="{{goodsShow}}" wx:key="index">
-    <good-com goodsData="{{item}}"></good-com>
+  <view class="goodsDetail" wx:for="{{freeeData}}" wx:key="index">
+    <free-com goodsData="{{item}}"></free-com>
   </view>
 </block>
 
