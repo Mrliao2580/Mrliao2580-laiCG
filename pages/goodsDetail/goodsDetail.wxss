@@ -313,8 +313,13 @@ page{
   background: white;
 }
 
-.tab-box .imgDetail .imgs image{
+.tab-box .imgDetail .imgs .richText{
   width: 100%;
+}
+
+.tab-box .imgDetail .imgs .richText .content_img ::v-deep img{
+  width: 100%;
+  height: 100%;
 }
 
 .tab-box  .contentDetail{
@@ -357,4 +362,58 @@ page{
 
 .unTip .bgc{
   background: #ffecf0;
+}
+
+.myTab{
+  position: fixed;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 110rpx;
+  background: white;
+  z-index: 999;
+  border-top: solid 2rpx #eee;
+}
+
+.myTab .store-link,
+.myTab .shopping-cart{
+  display: flex;
+  flex-direction: column;
+  width: 148rpx;
+  height: 124rpx;
+  align-items: center;
+  border-right: 2rpx solid #eee;
+  color: #979797;
+  font-size: 28rpx;
+  justify-content: center;
+}
+
+.store-link .iconfont,
+.shopping-cart .iconfont{
+  font-size: 46rpx !important;
+}
+
+.myTab .button-block{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.myTab .button-block .joinShop,
+.myTab .button-block .nowBuy{
+  flex:1;
+  height: 100%;
+  text-align: center;
+  line-height: 110rpx;
+}
+
+.myTab .button-block .joinShop{
+  background: linear-gradient(210deg, #ffcfdf 0%, #fff1f6 98%);
+  color: #fe4070;
+}
+
+.myTab .button-block .nowBuy{
+  background: linear-gradient(142deg, #ff5593 0%, #fe4070 100%);
+  color: #fff;
 }

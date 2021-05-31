@@ -13,3 +13,21 @@ module.exports.fetchSwipImg = function() {
     method:"GET"
   })
 }
+
+module.exports.fetchFreeData = function() {
+  return request({
+    url:"http://lcg.zhengxl.show/api/topspeed?page=1&pagesize=6",  // 接口未给
+    method:"GET"
+  })
+}
+
+// 商品详情
+module.exports.fetchGoodDetail = function( goods_id) {
+  return request({
+    url:"http://lcg.zhengxl.show/api/getGoodsInfo?goods_id",  // 接口未给
+    method:"GET",
+    data:{
+      goods_id
+    }
+  })
+}

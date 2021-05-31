@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "good-com":"../../components/good/good"
+    "good-com":"../../components/good/good",
+    "free-com":"../../components/freeGood/freeGood"
   }
 }

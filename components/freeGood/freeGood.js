@@ -26,9 +26,6 @@ Component({
       wx.navigateTo({
         url: `/pages/goodsDetail/goodsDetail?goods_id=${goods_id}`,
       })
-    },
-
-   
-
+    }
   }
 })

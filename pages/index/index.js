@@ -1,6 +1,6 @@
 // index.js
 // 获取应用实例
-let {fetchSwipImg,fetchGoodData} = require("../../api/goods");
+let {fetchSwipImg,fetchGoodData,fetchFreeData} = require("../../api/goods");
 
 Page({
   data: {
@@ -24,7 +24,7 @@ Page({
       'http://mp5.jmstatic.com/mobile/other/detail_page_guarantee/return_guarantee_7.png?imageView2/2/w/51/q/70'
     ],
     navTtile:['海外直供','原装正品','极速到货','轻松退货'],
-
+    freeeData:[],
     // 母婴
     motherDu:[
       'http://mp5.jmstatic.com/mobile/card_material/item_2386_512_512-ipad2048_1593481826.jpeg?imageView2/2/w/160/q/90',
@@ -50,6 +50,8 @@ Page({
   onLoad(){
     this._fedtchSwipImg();
     this.swipImg();
+    this. _fetchFreeData();
+    // console.log(this.data.goodsShow)
   },
 
   // 商品詳情
@@ -58,6 +60,15 @@ Page({
   this.setData({
     goodsShow:message
   })
+  },
+
+  // 免税店数据
+  async _fetchFreeData(){
+    let {message} = await fetchFreeData();
+    this.setData({
+      freeeData:message
+    })
+    // console.log(this.data.freeeData)
   },
 
   // 搜索框点击事件
