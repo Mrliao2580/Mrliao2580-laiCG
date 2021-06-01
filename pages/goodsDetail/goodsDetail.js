@@ -69,9 +69,9 @@ Page({
   // 加入购物车
   addShopping(){
     let token = wx.getStorageSync('token');
-    console.log(token);
+    // console.log(token);
     let Token =  gettoken();
-    console.log('Token',Token);
+    // console.log('Token',Token);
     if(token = Token){
       console.log('加入购物车成功')
     } else{
@@ -81,20 +81,22 @@ Page({
       wx.navigateTo({
         url: '/pages/login/login',
       })
-    }
+    } 
   },
 
   // 点击跳转到商品详情页
   async goodsDetail(){
     let goods_id = this.data.goodData
     let {message} = await fetchGoodDetail(goods_id);
-    // message.description_info = JSON.stringify(message.description_info);
-    console.log(message.description_info);
-    // return;
+    let img = message[0].description_info.description
+    message[0].description_info.description = img.replace(/<img/g, '<img style="width:100%"');
+   
+    
+    // console.log( img)
     this.setData({
       goodDetail:message[0]
     })
-    console.log(this.data.goodDetail)
+    // console.log('data',this.data.goodDetail.properties)
   },
 
   /**

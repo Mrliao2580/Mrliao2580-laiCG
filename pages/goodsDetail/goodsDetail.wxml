@@ -113,13 +113,13 @@
 <van-tabs active="{{ active }}" bind:change="onChange"  class="tab-box">
   <van-tab title="图文详情" class="imgDetail">
    <view class="imgs">
-   <rich-text class="richText" nodes="{{goodDetail.description_info.description}}"></rich-text>
+    <rich-text class="richText" nodes="{{goodDetail.description_info.description}}"></rich-text>
    </view>
   </van-tab>
   <van-tab title="商品参数" class="contentDetail">
-    <view class="contentList">
-      <text class="goodsName">商品名称</text>
-      <text class="googsContent">AHC玻尿酸B5洗面奶180 ML</text>
+    <view class="contentList" wx:for="{{goodDetail.properties}}" wx:key="index">
+      <text class="goodsName">{{item.name}}</text>
+      <text class="googsContent">{{item.value}}</text>
     </view>
   </van-tab>
   <van-tab title="评价" class="tuwen-box">

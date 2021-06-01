@@ -111,7 +111,24 @@
   <view class="Separate"></view>
   <!-- 商品上新 -->
   <view class="goodsChange">
-      <image src="http://f0.jmstatic.com/btstatic/h5/common/icon_title.png" class="goodsItm"></image>
+      <image src="http://f0.jmstatic.com/btstatic/h5/common/icon_title.png" class="goodsItm" mode="widthFix"></image>
       <text>疯抢专场 早10点上新</text>
   </view>
+  <block wx:for="{{motherData}}" wx:key="index">
+    <view class="motherGoods" >
+      <view class="itmcontent">
+        <image src="{{item.gs_img}}"></image>
+        <text class="full">{{item.discount_string}}</text>
+      </view>
+      <view class="motherTab">
+        <view class="tabContent">
+          <view class="bbox">
+            <view class="title">{{item.title}}</view>
+            <view class="end_time">{{item.update_time}}</view>
+          </view>
+        </view>
+        <image src="{{item.logo_img}}"></image>
+      </view>
+    </view>
+  </block>
 </block>

@@ -1,6 +1,6 @@
 // index.js
 // 获取应用实例
-let {fetchSwipImg,fetchGoodData,fetchFreeData} = require("../../api/goods");
+let {fetchSwipImg,fetchGoodData,fetchFreeData,fetchMotherData} = require("../../api/goods");
 
 Page({
   data: {
@@ -36,7 +36,10 @@ Page({
       'http://mp5.jmstatic.com/mobile/card_material/item_2386_512_512-ipad2048_1595310899.jpeg?imageView2/2/w/160/q/90',
       'http://mp5.jmstatic.com/mobile/card_material/item_2386_512_512-ipad2048_1620784189.jpeg?imageView2/2/w/160/q/90'
     ],
-    finds:''
+    finds:'',
+    motherData:[],
+    page:1,
+    motherDatas:[]
   },
 
   selected(e){
@@ -51,7 +54,7 @@ Page({
     this._fedtchSwipImg();
     this.swipImg();
     this. _fetchFreeData();
-    // console.log(this.data.goodsShow)
+    this._fetchMotherData();
   },
 
   // 商品詳情
@@ -92,5 +95,29 @@ Page({
     wx.navigateTo({
       url: `/pages/legend/legend?index=${index}`,
     })
+  },
+
+  // 母婴商品
+  async _fetchMotherData(){
+    let page = this.data.page
+    let {message} = await fetchMotherData(page);
+    this.data.motherData = message;
+    this.setData({
+      motherData:message
+    })
+    
+  },
+
+  // 上拉事件
+  // onReachBottom(){
+  //   this.scrollMotherData()
+  // },
+
+  async scrollMotherData(){
+    let data = ++ this.data.page;
+    this.setData({
+      page:data
+    })
+    this._fetchMotherData();
   }
 })

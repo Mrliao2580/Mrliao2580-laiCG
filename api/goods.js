@@ -31,3 +31,11 @@ module.exports.fetchGoodDetail = function( goods_id) {
     }
   })
 }
+
+// 母婴商品详情
+module.exports.fetchMotherData  = function( page) {
+  return request({
+    url:`http://lcg.zhengxl.show/api/mom?page=${page}&pagesize=6`,  // 接口未给
+    method:"GET",
+  })
+}

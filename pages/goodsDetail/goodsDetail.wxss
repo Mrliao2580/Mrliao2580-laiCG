@@ -311,6 +311,7 @@ page{
 .tab-box .imgDetail .imgs{
   width: 100%;
   background: white;
+  
 }
 
 .tab-box .imgDetail .imgs .richText{
@@ -329,11 +330,16 @@ page{
 .tab-box  .contentDetail .contentList{
   margin: 0 20rpx;
   font-size: 28rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 .tab-box  .contentDetail .contentList .goodsName{
   margin-right: 40rpx;
+  display: inline-block;
   color: #999999;
+  width: 140rpx;
 }
 
 .tab-box .tuwen-box .high-percent{
