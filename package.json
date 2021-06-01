@@ -1,12 +1,9 @@
 {
-<<<<<<< HEAD
   "name": "Mrliao2580-laiCG",
   "version": "1.0.0",
   "description": "",
-=======
   "name": "mrliao2580-laicg",
   "version": "1.0.0",
->>>>>>> 7306fd3d8bc25bd701d0ebc7a09027108464988f
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,10 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/Mrliao2580/Mrliao2580-laiCG.git"
   },
-<<<<<<< HEAD
   "keywords": [],
-=======
->>>>>>> 7306fd3d8bc25bd701d0ebc7a09027108464988f
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -26,13 +20,9 @@
   },
   "homepage": "https://github.com/Mrliao2580/Mrliao2580-laiCG#readme",
   "dependencies": {
-<<<<<<< HEAD
     "@miniprogram-component-plus/tabs": "^1.0.0"
-  }
-=======
-    "vant-weapp": "^0.5.29"
   },
+  "vant-weapp": "^0.5.29",
   "devDependencies": {},
   "description": ""
->>>>>>> 7306fd3d8bc25bd701d0ebc7a09027108464988f
 }
