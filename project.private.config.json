@@ -23,6 +23,11 @@
           "pathName": "pages/goodsDetail/goodsDetail",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/qinshe/qinshe",
+          "pathName": "pages/qinshe/qinshe",
+          "scene": null
         }
       ]
     }
