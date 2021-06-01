@@ -1,31 +1,43 @@
-// pages/login/login.js
+// pages/mingpin-shop/mingpin-shop.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    token:''
+    tabs: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let token = wx.getStorageSync('token',token)
-    console.log(token)
-    this.setData({
-      token
-    })
+  
+ const tabs = [
+      {
+       title:"小白鞋"
+      },
+      {
+        title:"尖货TOP"
+      },
+      {
+        title:"袜子"
+      },
+      {
+        title:"拖鞋"
+      },
+]
+this.setData({
+  tabs
+})
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
 
   },
-  
-  
 
   /**
    * 生命周期函数--监听页面显示
@@ -67,8 +79,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  aaa(){
-    console.log('aaaa')
   }
 })

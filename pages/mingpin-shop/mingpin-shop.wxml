@@ -1,0 +1,65 @@
+<view class="mingpin-box">
+  <view class="mingpin-top">
+    墨勒 致美时尚 吸晴美鞋 
+  </view>
+  
+  <mp-tabs 
+  tabs="{{tabs}}" 
+  activeTab="{{indexa}}" 
+  swiperClass="weui-tabs-swiper"
+  bindtabclick="onTabClick"
+  bindchange="onChange"
+  activeClass="tab-bar-title__selected"
+  tab-active-text-color="#c80000"
+>
+</mp-tabs>
+<view class="mingpin-img">
+<image src="../../picture/hhh.jpg"></image>
+</view>
+<view class="wenzi"><text style="color:white">———</text> 高跟鞋/单鞋 <text style="color:white">————</text></view>
+<view class="shop-box">
+  <view class="shopping-box">
+    <view class="shopping-img">
+      <image src="/picture/xie.jpg"></image>
+    </view>
+    <view class="miaosu">洞洞鞋女ins凉鞋夏时尚外穿可爱情侣款学生韩版软底透气休闲拖鞋</view>
+    <view class="money-box">
+      <text style="font-size:38rpx; font-weight:10; color:#fe6aba;">￥59</text>
+      <text style="font-size:36rpx;font-weight:10;">￥399</text>
+      <text class="jian">减</text>
+      <view class="pinlun">暂无评论</view>
+    </view>
+   
+  </view>
+  <view class="shopping-box">
+    <view class="shopping-img">
+      <image src="/picture/xie.jpg"></image>
+    </view>
+    <view class="miaosu">洞洞鞋女ins凉鞋夏时尚外穿可爱情侣款学生韩版软底透气休闲拖鞋</view>
+    <view class="money-box">
+      <text style="font-size:38rpx; font-weight:10; color:#fe6aba;">￥59</text>
+      <text style="font-size:36rpx;font-weight:10;">￥399</text>
+      <text class="jian">减</text> 
+      <view class="pinlun">暂无评论</view>
+    </view>
+    
+    
+
+   
+  </view>
+  <view class="shopping-box">
+    <view class="shopping-img">
+      <image src="/picture/xie.jpg"></image>
+    </view>
+    <view class="miaosu">洞洞鞋女ins凉鞋夏时尚外穿可爱情侣款学生韩版软底透气休闲拖鞋</view>
+    <view class="money-box">
+      <text style="font-size:38rpx; font-weight:10; color:#fe6aba;">￥59</text>
+      <text style="font-size:36rpx;font-weight:10;">￥399</text>
+      <text class="jian">减</text> 
+      <view class="pinlun">暂无评论</view>
+    </view>
+  
+  </view>
+</view>
+  
+</view>

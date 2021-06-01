@@ -11,7 +11,7 @@ module.exports.getuser = function(code){
 }
 module.exports.getlogin = function(code){
       return request({
-        url:'http://127.0.0.1:3000/getlogin',
+        url:'http://denglu.zhengguibin.xyz/getlogin',
         method:'POST',
         data:{
           code

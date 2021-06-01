@@ -1,0 +1,85 @@
+.mingpin-box{
+  width: 100%;
+  height: 100%;
+  background:#ff295b;
+}
+.mingpin-top{
+  width: 100%;
+  height: 100rpx;
+  font-size:40rpx;
+  font-weight: 10;
+  text-align: center;
+  line-height: 100rpx;
+  background:white;
+  border-bottom:0.5rpx solid  #9d9d9d;
+}
+.weui-tabs-bar__content{
+  width: 100%;
+  height: 90rpx;
+  }
+.weui-tabs-bar__title{
+  text-align: center;
+  font-weight: 15s;
+  font-size:35rpx;
+  line-height: 90rpx;
+  width: 140rpx;
+  height: 90rpx;
+}
+.mingpin-img{
+  width: 100%;
+  background:#ccc;
+}
+.mingpin-img image{
+  width: 100%;
+}
+swiper{
+width: 0;
+height: 0;
+margin:0;
+padding:0;
+}
+.wenzi{
+  width: 100%;
+  height: 80rpx;
+  font-size:40rpx;
+  font-weight: 13;
+  text-align: center;
+  line-height:80rpx;
+}
+.shop-box{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+  height: 100%;
+}
+.shopping-box{
+  margin:6rpx;
+  width: 360rpx;
+  height:700rpx;
+ 
+  background-color: #ccc;
+}
+.shopping-box image{
+  width: 360rpx;
+}
+.shopping-box .miaosu{
+  margin:10rpx;
+  font-size: 31rpx;
+  font-weight: 10;
+}
+.money-box{
+  margin-top:10rpx;
+  margin-top:40rpx;
+  width: 400rpx;
+}
+.money-box .jian{
+  margin-left:10rpx;
+  border:1px solid #fe6aba;
+  border-radius: 100%;
+  color:#fe6aba;
+}
+.pinlun{
+  font-weight: 10;
+  margin-left: 10rpx;
+  
+}

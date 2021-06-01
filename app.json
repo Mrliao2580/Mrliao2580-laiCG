@@ -1,8 +1,11 @@
 {
   "pages":[
+    "pages/mingpin-shop/mingpin-shop",
+    "pages/shechi-box/shechi-box",
     "pages/index/index",
     "pages/qinshe/qinshe",
     "pages/group-buying/group-buying",
+    "pages/mingpin/mingpin",
     "pages/mine/mine",
     "pages/login/login",
     "pages/menu/menu",

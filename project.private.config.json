@@ -17,11 +17,6 @@
           "pathName": "pages/goodsDetail/goodsDetail",
           "query": "",
           "scene": null
-        },
-        {
-          "name": "pages/shopping/shopping",
-          "pathName": "pages/shopping/shopping",
-          "scene": null
         }
       ]
     }
