@@ -14,7 +14,8 @@
     "pages/shop/shop",
     "pages/group/group",
     "pages/shopping/shopping",
-    "pages/goodsDetail/goodsDetail"
+    "pages/goodsDetail/goodsDetail",
+    "pages/legend/legend"
   ],
   "window":{
     "backgroundTextStyle":"light",
