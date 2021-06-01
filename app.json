@@ -1,8 +1,8 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/mingpin-shop/mingpin-shop",
     "pages/shechi-box/shechi-box",
-    "pages/index/index",
     "pages/qinshe/qinshe",
     "pages/group-buying/group-buying",
     "pages/mingpin/mingpin",
@@ -14,7 +14,8 @@
     "pages/shop/shop",
     "pages/group/group",
     "pages/shopping/shopping",
-    "pages/goodsDetail/goodsDetail"
+    "pages/goodsDetail/goodsDetail",
+    "pages/legend/legend"
   ],
   "window":{
     "backgroundTextStyle":"light",
