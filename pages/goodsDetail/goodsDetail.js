@@ -1,5 +1,5 @@
 let { getlogin } = require("../../api/loginapi");
-let { gettoken,formatTime,formatTimeTwo } = require("../../utils/util");
+let { gettoken,dateDiff } = require("../../utils/util");
 let { fetchGoodDetail } = require("../../api/goods");
 // pages/goodsDetail/goodsDetail.js
 Page({
@@ -73,7 +73,10 @@ Page({
     let Token =  gettoken();
     // console.log('Token',Token);
     if(token = Token){
-      console.log('加入购物车成功')
+      
+      wx.showToast({
+        title: '加入购物车成功',
+      })
     } else{
       wx.showToast({
         title: '登录失败',
@@ -88,7 +91,13 @@ Page({
   async goodsDetail(){
     let goods_id = this.data.goodData
     let {message} = await fetchGoodDetail(goods_id);
+    // console.log(message);
+    // return;
+    message[0].end_time = dateDiff(message[0].end_time)
+    // console.log(message[0].end_time)
+  
     let img = message[0].description_info.description
+    // console.log('msg',message[0].description_info.description)
     message[0].description_info.description = img.replace(/<img/g, '<img style="width:100%"');
    
     

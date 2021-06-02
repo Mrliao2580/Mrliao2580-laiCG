@@ -1,18 +1,39 @@
-// pages/qinshe/qinshe.js
+let { fetchSearchData} = require("../../api/goods");
+// pages/searchResult/searchResutl.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    searchContent:'',
+    goodSdata:[],
+    isShow:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let {searchContent} = options
+    // console.log(searchContent)
+    this.setData({
+      searchContent:searchContent
+    })
+    console.log('数据',this.data.searchContent)
+    this.searchGoodsData()
+  },
 
+  async searchGoodsData(){
+    let resutl = await fetchSearchData(this.data.searchContent);
+    if(resutl.length >0){
+      this.setData({
+        isShow:true
+      })
+    }
+    this.setData({
+      goodSdata:resutl
+    })
   },
 
   /**

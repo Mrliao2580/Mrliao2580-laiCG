@@ -2,14 +2,14 @@
 .header{
   height: 100%;
   position: relative;
-  line-height: 90rpx;
   text-align: center;
 }
 
 .header .search1{
   position: absolute;
   z-index: 100;
-  left: 220rpx;
+  left: 222rpx;
+  top: 15rpx;
   color: #999;
 }
 
@@ -19,7 +19,7 @@
   height: 60rpx;
   width: 100%;
   border-radius: 20px;
-  line-height: 30rpx;
+  line-height: 55rpx;
   font-size: 28rpx;
   text-align: center;
   color: #999;
@@ -48,6 +48,7 @@
 
 .goodsType .box view{
   margin:0 20rpx;
+  line-height: 90rpx;
 }
 
 
@@ -187,6 +188,7 @@
 .goodsChange text{
   color: #333;
   font-size: 14px;
+  margin-left: 20rpx;
 }
 
 /* 母婴板块 */
@@ -200,67 +202,54 @@
   height: 187rpx;
 }
 
-.motherGoods{
+/* 搜索遮盖 */
+.searchCoverUp{
+  position: fixed;
   width: 100%;
-  height: 500rpx;
-  padding-bottom: 25rpx;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
 }
 
-.motherGoods .itmcontent image{
-  width: 100%;
-}
-
-.motherGoods .itmcontent{
-  position: relative;
-}
-
-.motherGoods .itmcontent .full{
-  position:absolute;
-  left: 0;
-  bottom: 20rpx;
-}
-
-.motherGoods .full{
+.searchBox{
+  z-index: 9999;
+  position: fixed;
+  height: 200rpx;
   background: black;
-  color: white;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  background: white;
+ 
 }
 
-.motherGoods .motherImg image{
-  width: 100%;
-}
-.motherTab{
-  display:flex;
-  justify-content: space-between;
-  text-align:center;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 0 20rpx;
-}
-
-.motherTab image{
-  width: 146rpx;
-  height: 73rpx;
-}
-
-.motherTab .tabContent .bbox{
+.searchBox .searchHear{
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items:  flex-start;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+
 }
 
-.motherTab .tabContent .bbox .title{
-  color: #333;
+.searchBox .searchHear van-search{
+  flex: 1;
+}
+
+.searchBox .searchHear .searchText{
+  padding-right: 20rpx;
+  color: #999;
+}
+
+.searchBox .search_links{
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items:center;
+  padding: 25rpx 20rpx;
+  color: #666;
   font-size: 28rpx;
-  font-weight: 400;
-}
-
-.motherTab .tabContent .bbox .end_time{
-    color: #999;
-    height: .64rem;
-    line-height: .64rem;
-    vertical-align: middle;
-    font-size: 24rpx;
+  border-bottom: 1rpx solid #eee;
 }
 
    

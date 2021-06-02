@@ -27,6 +27,12 @@
         {
           "name": "pages/qinshe/qinshe",
           "pathName": "pages/qinshe/qinshe",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "searchResult",
+          "pathName": "pages/searchResult/searchResutl",
           "scene": null
         }
       ]

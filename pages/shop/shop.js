@@ -59,6 +59,7 @@ Page({
 
   },
 
+  //搜索框搜索時触发
   textValue(event){
     let data = this.data.history;
     data.push(event.detail)
@@ -69,6 +70,10 @@ Page({
       setStore:data
     })
     this.goodsChnage();
+    let searchContent = event.detail;   // 输入框搜索时的内容
+    wx.navigateTo({
+      url: `/pages/searchResult/searchResutl?searchContent=${searchContent}`,
+    })
   },
 
   goodsChnage(){
@@ -78,5 +83,15 @@ Page({
      this.setData({
        goods:result
      })
-  }
+  },
+  
+  backHome(){
+    wx.navigateBack({
+      success(res){
+        console.log('2342134')
+      }
+    })
+  },
+
+
 })

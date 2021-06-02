@@ -1,6 +1,6 @@
 // index.js
 // 获取应用实例
-let {fetchSwipImg,fetchGoodData,fetchFreeData,fetchMotherData} = require("../../api/goods");
+let {fetchSwipImg,fetchGoodData,fetchFreeData,fetchMotherData,fetchLuxuryData,fetchfamousData,fetchsearchCover} = require("../../api/goods");
 
 Page({
   data: {
@@ -39,8 +39,22 @@ Page({
     finds:'',
     motherData:[],
     page:1,
-    motherDatas:[]
+    motherDatas:[],
+
+     // 轻奢
+    luxuryDatas:[],
+
+    // 名品特卖
+    famousData:[],
+
+    // 搜索遮盖数据
+    searchCover:[],
+    isShowSearch:false
   },
+
+ 
+
+ 
 
   selected(e){
     let index = e.currentTarget.dataset.index;
@@ -55,6 +69,9 @@ Page({
     this.swipImg();
     this. _fetchFreeData();
     this._fetchMotherData();
+    this.luxuryData();
+    this._famousProduct();
+    this.searchCoverData()
   },
 
   // 商品詳情
@@ -78,6 +95,9 @@ Page({
   clickSearch(){
     wx.navigateTo({
       url: '/pages/shop/shop',
+    }),
+    this.setData({
+      isShowSearch:true
     })
   },
 
@@ -87,6 +107,7 @@ Page({
     this.setData({
       swipImg : message
     })
+    // console.log('swipImg',this.data.swipImg)
   },
 
   // 海外直供
@@ -119,5 +140,54 @@ Page({
       page:data
     })
     this._fetchMotherData();
+  },
+
+  // 轻奢数据
+  async luxuryData(){
+    let {message} = await fetchLuxuryData();
+    this.setData({
+      luxuryDatas:message
+    })
+  },
+
+  // 名品特卖数据
+  async _famousProduct(){
+    let {message} = await fetchfamousData();
+    this.setData({
+      famousData:message
+    })
+  },
+
+  // 搜索责改
+  async searchCoverData(){
+    let {message} = await fetchsearchCover()
+    this.setData({
+      searchCoverData:message
+    })
+  },
+
+  // 搜索遮盖返回关闭
+  searchBack(){
+    console.log(111)
+    this.setData({
+      isShowSearch:false
+    })
+  },
+
+  // 搜索遮盖本省关闭
+  serachBoxOff(){
+    this.setData({
+      isShowSearch:false
+    })
+  },
+
+
+  // 搜索内容
+  searchData(e){
+    let searchContent = e.detail;
+    wx.navigateTo({
+      url: `/pages/searchResult/searchResutl?searchContent=${searchContent}`,
+    })
   }
 })
+

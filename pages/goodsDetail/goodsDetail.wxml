@@ -13,7 +13,7 @@
     </view>
     <text class="buy">{{goodDetail.buyer_number_text}}</text>
   </view>
-  <text class="count_down">还剩33天13:9:52</text>
+  <text class="count_down">发售：{{goodDetail.end_time}}</text>
 </view>
 <view class="normal_desc">{{goodDetail.title}}</view>
 <!-- 运费 -->
