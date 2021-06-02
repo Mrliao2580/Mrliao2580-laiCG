@@ -1,0 +1,11 @@
+<view class="huodon">
+<view class="box">
+  <image src="../../picture/xl.jpg"></image>
+  <view class="huodon-box">
+    <view class="miaosu">
+      <text>asdsdds</text>
+      <text>sasass</text>
+    </view>
+    <view class="huodon-image"><image src="../../picture/3610.jpg"></image></view>
+    </view>
+  </view></view>

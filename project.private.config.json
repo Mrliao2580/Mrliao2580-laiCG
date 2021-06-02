@@ -19,20 +19,22 @@
           "scene": null
         },
         {
-          "name": "goodDetail",
+          "name": "goodsdetail",
           "pathName": "pages/goodsDetail/goodsDetail",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/qinshe/qinshe",
-          "pathName": "pages/qinshe/qinshe",
+
+          "name": "pages/mingpin/mingpin",
+          "pathName": "pages/mingpin/mingpin",
           "query": "",
           "scene": null
         },
         {
-          "name": "searchResult",
-          "pathName": "pages/searchResult/searchResutl",
+          "name": "legend",
+          "pathName": "pages/legend/legend",
+          "query": "",
           "scene": null
         }
       ]
