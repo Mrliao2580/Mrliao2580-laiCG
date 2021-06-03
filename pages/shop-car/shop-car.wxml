@@ -1,0 +1,52 @@
+<view class="shop-car">
+  <view class="fuxuan-box">
+    <van-checkbox
+  value="{{ checked }}"
+  checked-color="#07c160"
+  bind:change="onChange"
+>
+</van-checkbox>
+  </view>
+<view class="car-box">
+<view class="car-image">
+  <image src="../../picture/xiangshui.jpg"></image></view>
+<view class="car-miaosu">
+  <view class="miaosu" >111111</view>
+ 
+  <view class="shuliang">
+    <van-stepper value="{{ 1 }}" bind:change="onChange" wx:if="{{dianji}}"/>
+  <view class="guige" wx:if="{{!dianji}}">111</view>
+  <view class="jishu">x1</view>
+</view>
+<view class="jiage-box">
+ <view class="jiage">￥328</view> 
+  <view slot="footer" class="anniu">
+    <van-button size="mini" bindtap="dianji" wx:if="{{!dianji}}">编辑</van-button>
+    <block wx:if="{{dianji}}">
+      <van-button size="mini" bindtap="shanchu">删除</van-button>
+    <van-button size="mini" bindtap="wancheng">完成</van-button>
+    </block>
+  
+ </view>
+</view>
+</view>
+</view>
+</view>
+<view class="wenzi-box"><view class="xiang-box">享</view> 已享商家满169元包邮</view>
+<van-submit-bar
+  price="{{ 3050 }}"
+  button-text="提交订单"
+  bind:submit="onClickButton"
+  tip="{{ true }}"
+>
+<view class="fuxuans">
+    <van-checkbox
+  value="{{ checked }}"
+  checked-color="#07c160"
+  bind:change="onChange"
+>
+
+</van-checkbox>
+  </view>
+</van-submit-bar>
+<van-dialog id="van-dialog" />

@@ -1,0 +1,78 @@
+.shop-car{
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+}
+.fuxuan-box{
+  margin-top:100rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.car-miaosu{
+  width: 100%;
+  height: 250px;
+  padding:10rpx;
+}
+.miaosu{
+  font-size: 34rpx;
+}
+.car-box{
+  display: flex;
+  width: 100%;
+  height: 250rpx;
+  background:#cccc;
+}
+.shuliang{
+  margin-top:10rpx;
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+}
+.car-image{
+  width: 250rpx;
+  width: 250rpx;
+}
+.jiage-box{
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+}
+.anniu-box{
+  width: 300rpx;
+  height: 50rpx;
+  background:#ccc;
+}
+.jiage{
+  margin-top:15rpx;
+  color:#fe4070;
+  font-size:40rpx;
+}
+.car-image image{
+  width: 250rpx;
+  height: 250rpx;
+}
+.anniu{
+  margin-top:40rpx;
+}
+.wenzi-box{
+  display:flex;
+  color:#fe6aba;
+  font-weight: 10;
+  font-size:30rpx;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.wenzi-box .xiang-box{
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50rpx;
+  height: 50rpx;
+  width: 50rpx;
+  margin:10rpx 20rpx 0 20rpx;
+  border: 2px solid #fe6aba;
+}
+.fuxuan{
+  width: 40rpx;
+  height: 40rpx;
+}
