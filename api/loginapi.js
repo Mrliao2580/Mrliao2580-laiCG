@@ -27,3 +27,9 @@ module.exports.gettuangou= function(){
     }
   })
 }
+module.exports.getshopcar = function(){
+  return request({
+    url:"http://lcg.zhengxl.show/api/getClassify",
+    mothods:"post"
+  })
+}

@@ -1,9 +1,7 @@
 {
-  "name": "Mrliao2580-laiCG",
-  "version": "1.0.0",
-  "description": "",
   "name": "mrliao2580-laicg",
   "version": "1.0.0",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,9 +18,9 @@
   },
   "homepage": "https://github.com/Mrliao2580/Mrliao2580-laiCG#readme",
   "dependencies": {
-    "@miniprogram-component-plus/tabs": "^1.0.0"
+    "@miniprogram-component-plus/tabs": "^1.0.0",
+    "@vant/weapp": "^1.6.8"
   },
   "vant-weapp": "^0.5.29",
-  "devDependencies": {},
-  "description": ""
+  "devDependencies": {}
 }

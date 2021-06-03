@@ -97,13 +97,14 @@
         </view>
         <image src="/picture/right.png"></image>
     </view>
-    <view class="xuanx-box">
+    <navigator url="/pages/dizhi/dizhi">  <view class="xuanx-box">
             <view class="xuanx-left">
             <image src="/picture/huoche.png"></image>
             <view style="font-size:37rpx;color:#333333;">收获地址</view>
         </view>
         <image src="/picture/right.png"></image>
-    </view>
+    </view></navigator>
+  
     <view class="xuanx-box">
             <view class="xuanx-left">
             <image src="/picture/tuichu.png"></image>
