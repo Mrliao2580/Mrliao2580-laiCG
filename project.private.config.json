@@ -13,14 +13,20 @@
     "miniprogram": {
       "list": [
         {
-          "name": "goodsdetail",
-          "pathName": "pages/goodsDetail/goodsDetail",
+          "name": "pages/dizhi/dizhi",
+          "pathName": "pages/dizhi/dizhi",
           "query": "",
           "scene": null
         },
         {
           "name": "pages/tianjia/tianjia",
           "pathName": "pages/tianjia/tianjia",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop-car/shop-car",
+          "pathName": "pages/shop-car/shop-car",
           "query": "",
           "scene": null
         },

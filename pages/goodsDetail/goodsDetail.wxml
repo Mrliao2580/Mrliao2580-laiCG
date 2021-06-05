@@ -1,7 +1,7 @@
 <!-- 商品图片 -->
 <view class="imgBox">
-  <image class="headerImg" src="http://mp6.jmstatic.com/product/005/179/5179236_std/5179236_1000_1000.jpg?v=1619165510&imageView2/2/w/800/q/90"></image>
-  <image class="absImg" src="http://p0.jmstatic.com/banner/area/000/000/020.jpg"></image>
+  <image class="headerImg" src="{{goodDetail.lunbo_img}}"></image>
+  <image class="absImg" src="{{goodDetail.hongkong_img}}"></image>
 </view>
 <!-- 商品价格 -->
 <view class="normalShow">
@@ -11,16 +11,16 @@
       <text class="cost_price">￥198</text>
       <text class="detail_text">已含税</text>
     </view>
-    <text class="buy">376人已购买</text>
+    <text class="buy">{{goodDetail.buyer_number_text}}</text>
   </view>
-  <text class="count_down">还剩33天13:9:52</text>
+  <text class="count_down">发售：{{goodDetail.end_time}}</text>
 </view>
-<view class="normal_desc">美国RCMA进口无色透明定妆粉散粉蜜粉底胡椒粉持久定妆85g</view>
+<view class="normal_desc">{{goodDetail.title}}</view>
 <!-- 运费 -->
 <view class="postage-wrap">
-  <view class="postageBox">
+  <view class="postageBox" bindtap="postageDire">
     <text class="postage-type">运费</text>
-    <text class="postage-content">单商家订单满169元包邮</text>
+    <text class="postage-content">{{goodDetail.freight.text}}</text>
     <i class="iconfont icon-youjiantou"></i>
   </view>
   <!-- 说明 -->
@@ -113,13 +113,13 @@
 <van-tabs active="{{ active }}" bind:change="onChange"  class="tab-box">
   <van-tab title="图文详情" class="imgDetail">
    <view class="imgs">
-    <image src="http://p12.jmstatic.com/global/image/202005/15/1589516217.5426.jpg"></image>
+    <rich-text class="richText" nodes="{{goodDetail.description_info.description}}"></rich-text>
    </view>
   </van-tab>
   <van-tab title="商品参数" class="contentDetail">
-    <view class="contentList">
-      <text class="goodsName">商品名称</text>
-      <text class="googsContent">AHC玻尿酸B5洗面奶180 ML</text>
+    <view class="contentList" wx:for="{{goodDetail.properties}}" wx:key="index">
+      <text class="goodsName">{{item.name}}</text>
+      <text class="googsContent">{{item.value}}</text>
     </view>
   </van-tab>
   <van-tab title="评价" class="tuwen-box">
@@ -135,7 +135,20 @@
       </block>
     </view>
   </van-tab>
-  
+  <view class="myTab">
+    <view class="store-link">
+      <i class="iconfont icon-dianpu"></i>
+      <text>店铺</text>
+    </view>
+    <view class="shopping-cart">
+      <i class="iconfont icon-line-shoppingbaggouwubao-01"></i>
+      <text bindtap="shopcar">购物车</text>
+    </view>
+    <view class="button-block">
+      <view class="joinShop" bindtap="addShopping">加入购物车</view>
+      <view class="nowBuy" bindtap="gobuy">立刻购买</view>
+    </view>
+  </view>
 </van-tabs>
 
 

@@ -1,27 +1,17 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
-
-  return `${[year, month, day].map(formatNumber).join('/')} ${[hour, minute, second].map(formatNumber).join(':')}`
-}
-
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : `0${n}`
-}
-
 const TOKEN = 'token';
-const gettoken = (token)=>{
+const gettoken = ()=>{
   return wx.getStorageSync(TOKEN)
 }
 const settoken = (token)=>{
    wx.setStorageSync(TOKEN,token)
 }
 
+
+// 时间戳转化器
+var dateDiff = function getLocalTime(nS) {     
+  return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');     
+}
+
 module.exports = {
-  formatTime,gettoken,settoken
+  gettoken,settoken,dateDiff
 }

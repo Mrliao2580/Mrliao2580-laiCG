@@ -1,6 +1,6 @@
 // index.js
 // 获取应用实例
-let {fetchSwipImg,fetchGoodData} = require("../../api/goods");
+let {fetchSwipImg,fetchGoodData,fetchFreeData,fetchMotherData,fetchLuxuryData,fetchfamousData,fetchsearchCover} = require("../../api/goods");
 
 Page({
   data: {
@@ -24,7 +24,7 @@ Page({
       'http://mp5.jmstatic.com/mobile/other/detail_page_guarantee/return_guarantee_7.png?imageView2/2/w/51/q/70'
     ],
     navTtile:['海外直供','原装正品','极速到货','轻松退货'],
-
+    freeeData:[],
     // 母婴
     motherDu:[
       'http://mp5.jmstatic.com/mobile/card_material/item_2386_512_512-ipad2048_1593481826.jpeg?imageView2/2/w/160/q/90',
@@ -36,8 +36,25 @@ Page({
       'http://mp5.jmstatic.com/mobile/card_material/item_2386_512_512-ipad2048_1595310899.jpeg?imageView2/2/w/160/q/90',
       'http://mp5.jmstatic.com/mobile/card_material/item_2386_512_512-ipad2048_1620784189.jpeg?imageView2/2/w/160/q/90'
     ],
-    finds:''
+    finds:'',
+    motherData:[],
+    page:1,
+    motherDatas:[],
+
+     // 轻奢
+    luxuryDatas:[],
+
+    // 名品特卖
+    famousData:[],
+
+    // 搜索遮盖数据
+    searchCover:[],
+    isShowSearch:false
   },
+
+ 
+
+ 
 
   selected(e){
     let index = e.currentTarget.dataset.index;
@@ -50,6 +67,11 @@ Page({
   onLoad(){
     this._fedtchSwipImg();
     this.swipImg();
+    this. _fetchFreeData();
+    this._fetchMotherData();
+    this.luxuryData();
+    this._famousProduct();
+    this.searchCoverData()
   },
 
   // 商品詳情
@@ -60,10 +82,22 @@ Page({
   })
   },
 
+  // 免税店数据
+  async _fetchFreeData(){
+    let {message} = await fetchFreeData();
+    this.setData({
+      freeeData:message
+    })
+    // console.log(this.data.freeeData)
+  },
+
   // 搜索框点击事件
   clickSearch(){
     wx.navigateTo({
       url: '/pages/shop/shop',
+    }),
+    this.setData({
+      isShowSearch:true
     })
   },
 
@@ -73,6 +107,7 @@ Page({
     this.setData({
       swipImg : message
     })
+    // console.log('swipImg',this.data.swipImg)
   },
 
   // 海外直供
@@ -81,5 +116,78 @@ Page({
     wx.navigateTo({
       url: `/pages/legend/legend?index=${index}`,
     })
+  },
+
+  // 母婴商品
+  async _fetchMotherData(){
+    let page = this.data.page
+    let {message} = await fetchMotherData(page);
+    this.data.motherData = message;
+    this.setData({
+      motherData:message
+    })
+    
+  },
+
+  // 上拉事件
+  // onReachBottom(){
+  //   this.scrollMotherData()
+  // },
+
+  async scrollMotherData(){
+    let data = ++ this.data.page;
+    this.setData({
+      page:data
+    })
+    this._fetchMotherData();
+  },
+
+  // 轻奢数据
+  async luxuryData(){
+    let {message} = await fetchLuxuryData();
+    this.setData({
+      luxuryDatas:message
+    })
+  },
+
+  // 名品特卖数据
+  async _famousProduct(){
+    let {message} = await fetchfamousData();
+    this.setData({
+      famousData:message
+    })
+  },
+
+  // 搜索责改
+  async searchCoverData(){
+    let {message} = await fetchsearchCover()
+    this.setData({
+      searchCoverData:message
+    })
+  },
+
+  // 搜索遮盖返回关闭
+  searchBack(){
+    console.log(111)
+    this.setData({
+      isShowSearch:false
+    })
+  },
+
+  // 搜索遮盖本省关闭
+  serachBoxOff(){
+    this.setData({
+      isShowSearch:false
+    })
+  },
+
+
+  // 搜索内容
+  searchData(e){
+    let searchContent = e.detail;
+    wx.navigateTo({
+      url: `/pages/searchResult/searchResutl?searchContent=${searchContent}`,
+    })
   }
 })
+

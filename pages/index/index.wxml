@@ -1,8 +1,25 @@
+<!-- 搜索遮盖 -->
+<view class="searchCoverUp" wx:if="{{isShowSearch}}" catchtap="serachBoxOff"></view>
+<view class="searchBox" wx:if="{{isShowSearch}}">
+    <!-- 搜索框 -->
+    <view class="searchHear">
+      <van-search value="{{ value }}" placeholder="搜索商品名称、名牌、功效" bind:search="searchData" />
+      <text class="searchText" bindtap="searchBack">返回</text>
+    </view>
+    <!-- 搜索内容 -->
+    <block wx:for="{{searchCoverData}}" wx:key="index">
+      <view class="search_links">
+        <text class="content">{{item.name}}</text>
+        <i class="iconfont icon-iconfontarrows"></i>
+      </view>
+    </block>
+</view>
+
 <!-- 首頁 -->
 <block class="index" wx:if="{{changeStyle == 0}}">
   <!-- 搜索框 -->
   <view class="header" bindtap="clickSearch">
-    <i class="iconfont icon-search search1"></i>
+    <i class="iconfont icon-search search1" bindtap="searchContent"></i>
     <button class="search">搜索商品 分类 功效</button>
   </view>
   <!-- 首页分类选项  -->
@@ -33,9 +50,9 @@
   <!-- 商品介绍 -->
   <view class="goodsDetail" wx:for="{{goodsShow}}" wx:key="index">
     <good-com goodsData="{{item}}"></good-com>
+    <!-- <free-com goodsData="{{item}}"></free-com> -->
   </view>
 </block>
-
 
 <!-- 急速免税店 -->
 <block class="dutyFree" wx:if="{{changeStyle == 1}}">
@@ -71,11 +88,10 @@
     <text>今日团购，1每天10点上新</text>
   </view>
   <!-- 商品介绍 -->
-  <view class="goodsDetail" wx:for="{{goodsShow}}" wx:key="index">
-    <good-com goodsData="{{item}}"></good-com>
+  <view class="goodsDetail" wx:for="{{freeeData}}" wx:key="index">
+    <free-com goodsData="{{item}}"></free-com>
   </view>
 </block>
-
 
 <!-- 母婴 -->
 <block  wx:if="{{changeStyle == 2}}">
@@ -111,7 +127,59 @@
   <view class="Separate"></view>
   <!-- 商品上新 -->
   <view class="goodsChange">
-      <image src="http://f0.jmstatic.com/btstatic/h5/common/icon_title.png" class="goodsItm"></image>
+      <image src="http://f0.jmstatic.com/btstatic/h5/common/icon_title.png" class="goodsItm" mode="widthFix"></image>
       <text>疯抢专场 早10点上新</text>
   </view>
+  <motherBaby-com motherData="{{motherData}}"></motherBaby-com>
+</block>
+
+<!-- 名品特卖 -->
+<block wx:if="{{changeStyle == 3}}">
+  <!-- 搜索框 -->
+  <view class="header" bindtap="clickSearch">
+    <i class="iconfont icon-search search1"></i>
+    <button class="search">搜索商品 分类 功效</button>
+  </view>
+  <!-- 首页分类选项  -->
+  <scroll-view scroll-x class="goodsType">
+    <view class="box" >
+        <view wx:for="{{goodsdata}}" wx:key="index" class="goodsBox">
+          <block wx:if="{{changeStyle == index}}">
+            <view class="name hidden" bindtap="selected" data-index="{{index}}">{{item}}</view>
+          </block>
+          <block wx:else>
+            <view class="name" bindtap="selected" data-index="{{index}}">{{item}}</view>
+          </block>
+        </view>
+    </view>
+  </scroll-view>
+  <!-- 热销品牌头部 -->
+  <view class="goodsChange">
+    <image src="http://f0.jmstatic.com/btstatic/h5/common/icon_title.png" class="goodsItm"></image>
+    <text>精选活动</text>
+  </view>
+  <motherBaby-com motherData="{{luxuryDatas}}"></motherBaby-com>
+</block>
+
+<!-- 轻奢 -->
+<block wx:if="{{changeStyle == 4}}">
+  <!-- 搜索框 -->
+  <view class="header" bindtap="clickSearch">
+    <i class="iconfont icon-search search1"></i>
+    <button class="search">搜索商品 分类 功效</button>
+  </view>
+  <!-- 首页分类选项  -->
+  <scroll-view scroll-x class="goodsType">
+    <view class="box" >
+        <view wx:for="{{goodsdata}}" wx:key="index" class="goodsBox">
+          <block wx:if="{{changeStyle == index}}">
+            <view class="name hidden" bindtap="selected" data-index="{{index}}">{{item}}</view>
+          </block>
+          <block wx:else>
+            <view class="name" bindtap="selected" data-index="{{index}}">{{item}}</view>
+          </block>
+        </view>
+    </view>
+  </scroll-view>
+  <motherBaby-com motherData="{{famousData}}"></motherBaby-com>
 </block>

@@ -1,53 +1,41 @@
-let {morendizhi} = require('../../api/dizhi')
+let { fetchSearchData} = require("../../api/goods");
+// pages/searchResult/searchResutl.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    checked: false,
-    morendizhi:[],
-    isDefault:0
+    searchContent:'',
+    goodSdata:[],
+    isShow:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getmoren()
-  },
-  async getmoren(){
-    let isDefault = 0;
-    let data = await morendizhi()
-    console.log(data)
-    data.forEach(item=>{
-      item.isDefault =  (item.isDefault == 0) ? false : true
-     
-    })
-    
+    let {searchContent} = options
+    // console.log(searchContent)
     this.setData({
-    morendizhi:data,
-    isDefault
+      searchContent:searchContent
     })
+    console.log('数据',this.data.searchContent)
+    this.searchGoodsData()
   },
-  onChange(event) {
-   console.log(event);
-   let mr = event.detail
-   console.log(mr)
-   if(this.data.isDefault == 0){
-    checked:false
-   }else{
-     checked:true
-   }
+
+  async searchGoodsData(){
+    let resutl = await fetchSearchData(this.data.searchContent);
+    if(resutl.length >0){
+      this.setData({
+        isShow:true
+      })
+    }
     this.setData({
-      checked:event.detail
+      goodSdata:resutl
     })
   },
-  tianjia(){
-    wx.navigateTo({
-      url: '/pages/tianjia/tianjia',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

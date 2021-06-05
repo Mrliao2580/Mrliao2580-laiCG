@@ -23,13 +23,9 @@ Component({
   methods: {
     detailPag(res){
       let {goods_id} = res.currentTarget.dataset;
-      // console.log('goods_id',goods_id);
       wx.navigateTo({
         url: `/pages/goodsDetail/goodsDetail?goods_id=${goods_id}`,
       })
-    },
-
-   
-
+    }
   }
 })

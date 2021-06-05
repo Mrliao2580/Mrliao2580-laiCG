@@ -10,11 +10,12 @@ module.exports.getuser = function(code){
   })
 }
 module.exports.getlogin = function(code){
+  // let code = '011yN30w31bNuW2ZT40w33kyob0yN308'
       return request({
-        url:'http://denglu.zhengguibin.xyz/getlogin',
+        url:'http://lcg.zhengxl.show/api/wxlogin',
         method:'POST',
         data:{
-          code
+          code,
         }
       })
 }

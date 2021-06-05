@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/dizhi/dizhi",
     "pages/tianjia/tianjia",
@@ -19,13 +19,15 @@
     "pages/group/group",
     "pages/shopping/shopping",
     "pages/goodsDetail/goodsDetail",
-    "pages/legend/legend"
+    "pages/legend/legend",
+    "pages/postage/postage",
+    "pages/searchResult/searchResutl"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
@@ -54,6 +56,6 @@
       "selectedIconPath": "/public/image/jm-my1.png"
     }
   ],
-  "selectedColor":"#fe4070"
+    "selectedColor": "#fe4070"
   }
 }

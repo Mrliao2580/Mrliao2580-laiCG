@@ -1,6 +1,6 @@
 .shop-car{
   width: 100%;
-  height: 250rpx;
+  height: 280rpx;
   display: flex;
 }
 .fuxuan-box{
@@ -14,7 +14,7 @@
   padding:10rpx;
 }
 .miaosu{
-  font-size: 34rpx;
+  font-size: 30rpx;
 }
 .car-box{
   display: flex;
@@ -30,7 +30,11 @@
 }
 .car-image{
   width: 250rpx;
-  width: 250rpx;
+  height: 250rpx;
+}
+.shop-car .car-image image{
+  width: 500rpx;
+  height: 250rpx;
 }
 .jiage-box{
   width: 100%;

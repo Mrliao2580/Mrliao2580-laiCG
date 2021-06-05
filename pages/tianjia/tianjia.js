@@ -1,15 +1,23 @@
-// pages/tianjia/tianjia.js
-Page({
 
+let {getdizhi} = require('../../api/dizhi')
+Page({
   /**
    * 页面的初始数据
    */
   data: {
     areaList:[],
-    checked: true,
+    checked: false,
     phone:'',
-    baocundizhi:{
-    }
+    detail:[],
+    name:'',
+    code:'',
+    sheng:'',
+    shi:'',
+    qu:'',
+    object:'',
+    xiangxidizhi:'',
+    isDefault:'',
+    youzheng:''
   },
   
   /**
@@ -3908,38 +3916,100 @@ Page({
     };
     this.setData({
       areaList
-    })
+    }),
+    this.baocundizhi()
   },
   shouji(e){
     console.log(e)
     let phoneNumber = e.detail
     console.log(phoneNumber)
+   this.phoneNumber=phoneNumber.replace(/^1[3456789]\d{9}$/)
+    console.log(phoneNumber)
+    this.setData({
+      phone:phoneNumber
+    })
     
   },
   dizhi(e){
     console.log(e)
-    let {detail} = e.detail
     let values = e.detail.values
     console.log(values)
+    let obj = [];
+    let object = []
+   values.forEach((item,index)=>{
+    console.log(item.code)
+    obj.push(item.code)
+    object.push(item.name)
+  })
+  obj = obj.join("-");
+  object = object.join("-");
+  console.log(obj);
+  this.setData({
+    object,
+    code:obj,
+    sheng:values[0].name,
+    shi:values[1].name,
+    qu:values[2].name,
+  })
   },
   name(e){
     console.log(e)
-    let detail = e.detail
-    console.log(detail)
+    let name = e.detail
+    console.log(name)
+    this.setData({
+      name
+    })
+      
   },
  
-   onChange({ detail }) {
+   onChange({detail}) {
     wx.showModal({
       title: '提示',
-      content: '是否切换开关？',
+      content: '是否设为默认地址？',
       success: (res) => {
         if (res.confirm) {
-          this.setData({ checked2: detail });
+          this.setData({ 
+            checked: detail,
+            isDefault:detail });
         }
+        console.log('res',res)
       },
     });
   },
-
+   async baocundizhi(){
+     let res = {
+       user_id:1234,
+       name:this.data.name,
+       tel: this.data.phone,
+       province: this.data.sheng,
+       city : this.data.shi,
+       country : this.data.qu,
+       postalCode:this.data.youzheng,
+       isDefault: this.data.isDefault,
+       areaCode :this.data.code,
+       addressDetail : this.data.xiangxidizhi,
+     }
+    let data = await getdizhi(res)
+    console.log(data)
+    wx.navigateTo({
+      url: '/pages/dizhi/dizhi',
+    })
+  },
+  youzheng(e){
+    console.log(e)
+    let youzheng = e.detail
+    console.log(youzheng)
+    this.setData({
+      youzheng
+    })
+  },
+  xiangxidizhi(e){
+    console.log(e)
+    let xiangxidizhi = e.detail
+    this.setData({
+      xiangxidizhi
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

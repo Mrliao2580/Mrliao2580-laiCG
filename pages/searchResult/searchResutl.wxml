@@ -1,0 +1,30 @@
+<view class="title">{{searchContent}}</view>
+<view class="sort">
+  <view class="brand">品牌</view>
+  <view class="assort">分类</view>
+  <view class="sffort">功效</view>
+  <view class="price">
+      价格
+      <view class="effect">
+        <i class="iconfont icon-shangjiantou"></i>
+        <i class="iconfont icon-iconfontarrows"></i>
+      </view>
+  </view>
+</view>
+<!-- 商品详情 -->
+<block wx:for="{{goodSdata}}" wx:key="index" wx:if="{{isShow}}">
+  <free-com goodsData="{{item}}"></free-com>
+</block>
+
+<block wx:if="{{!isShow}}">
+  <view class="hiddenContent">
+    <view class="imgList">
+      <image src="https://f0.jmstatic.com/btstatic/h5/common/no_result.png"></image>
+      <text class="no-result-info">抱歉，没有找到相关产品</text>
+    </view>
+    <view class="btn">逛逛今日团购</view>
+    <view class="jmImg">
+      <image src="https://s1.jmstatic.com/templates/touch/css/v3/image/footer_bg.jpg"></image>
+    </view> 
+  </view>
+</block>

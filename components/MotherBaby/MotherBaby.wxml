@@ -1,0 +1,17 @@
+  <view wx:for="{{motherData}}" wx:key="index">
+    <view class="motherGoods" >
+      <view class="itmcontent">
+        <image src="{{item.gs_img}}"></image>
+        <text class="full">{{item.discount_string}}</text>
+      </view>
+      <view class="motherTab">
+        <view class="tabContent">
+          <view class="bbox">
+            <view class="title">{{item.title}}</view>
+            <view class="end_time">{{item.update_time}}</view>
+          </view>
+        </view>
+        <image src="{{item.logo_img}}"></image>
+      </view>
+    </view>
+  </view>

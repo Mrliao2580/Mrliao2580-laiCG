@@ -59,24 +59,42 @@ Page({
 
   },
 
+  //搜索框搜索時触发
   textValue(event){
     let data = this.data.history;
     data.push(event.detail)
     // 存入本地存储
     wx.setStorageSync('history', data);
-    this.setData({
-      history:data,
-      setStore:data
-    })
     this.goodsChnage();
+    let searchContent = event.detail;   // 输入框搜索时的内容
+    wx.navigateTo({
+      url: `/pages/searchResult/searchResutl?searchContent=${searchContent}`,
+    })
   },
 
   goodsChnage(){
      // 取出本地存储 赋值给页面
+     let data = wx.getStorageSync('history');
+      // console.log(data)
+      if(data.length != 0) {
+        this.setData({
+          goods:data
+        })
+      }
      let result = wx.getStorageSync('history');
     //  console.log(result)
      this.setData({
        goods:result
      })
-  }
+  },
+  
+  backHome(){
+    wx.navigateBack({
+      success(res){
+        // console.log('2342134')
+      }
+    })
+  },
+
+
 })

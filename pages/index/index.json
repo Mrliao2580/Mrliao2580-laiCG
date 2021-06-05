@@ -1,5 +1,10 @@
 {
   "usingComponents": {
-    "good-com":"../../components/good/good"
-  }
+    "good-com":"../../components/good/good",
+    "free-com":"../../components/freeGood/freeGood",
+    "motherBaby-com":"../../components/MotherBaby/MotherBaby",
+    "van-search": "@vant/weapp/search/index"
+  },
+  "navigationBarTitleText":"首页"
+ 
 }

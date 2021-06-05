@@ -1,21 +1,25 @@
 <view class="dizhi-box">
-  <view class="dz-box">
+  <view class="moren-box" wx:for="{{morendizhi}}" >
+<view class="dz-box">
   <view class="xinxi-box">
     <view class="box">
-      <view class="moren" wx:if="{{checked}}">默认</view>
-    <view class="name">滨</view>
+      <view class="moren" wx:if="{{item.isDefault}}">默认</view>
+    <view class="name">{{item.name}}</view>
     </view>
-    <view class="phone">132211112222</view>
+    <view class="phone">{{item.tel}}</view>
   </view>
   <view class="btn-box">
-    <view class="diqu">广东省汕头市潮南区的hi晚点回去我i的地位i的味道</view>
+    <view class="diqu">{{item.addressDetail}}</view>
     <button size="mini">编辑</button>
   </view>
 </view>
 <view class="mrdz">
-  <van-checkbox value="{{ checked }}" bind:change="onChange">默认地址</van-checkbox>
+  <van-checkbox value="{{item.isDefault}}" bind:change="onChange">默认地址</van-checkbox>
   
 </view>
+  </view>
+ 
+
 <view class="tianjia">
   <button bindtap="tianjia">添加地址</button>
 </view>

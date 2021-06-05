@@ -1,41 +1,40 @@
-<view class="shop-car">
+
+<view class="shop-car" wx:for="{{data}}">
   <view class="fuxuan-box">
     <van-checkbox
-  value="{{ checked }}"
+  value="{{ item.checked }}"
   checked-color="#07c160"
   bind:change="onChange"
+  data-index="{{index}}"
 >
 </van-checkbox>
-  </view>
-<view class="car-box">
+</view>
 <view class="car-image">
-  <image src="../../picture/xiangshui.jpg"></image></view>
+  <image src="{{item.gs_img}}"></image></view>
 <view class="car-miaosu">
-  <view class="miaosu" >111111</view>
+  <view class="miaosu" >{{item.title}}</view>
  
   <view class="shuliang">
-    <van-stepper value="{{ 1 }}" bind:change="onChange" wx:if="{{dianji}}"/>
-  <view class="guige" wx:if="{{!dianji}}">111</view>
-  <view class="jishu">x1</view>
+    <van-stepper value="{{ item.detail }}" bind:plus="zengjia" bind:change="bujinqi" data-index="{{index}}" wx:if="{{item.anxia}}"/>
+  <view class="guige" wx:if="{{!item.anxia}}">90ml</view>
+<view class="jishu">x{{item.detail}}</view>
 </view>
 <view class="jiage-box">
- <view class="jiage">￥328</view> 
+ <view class="jiage">￥{{item.jumei_price}}</view> 
   <view slot="footer" class="anniu">
-    <van-button size="mini" bindtap="dianji" wx:if="{{!dianji}}">编辑</van-button>
-    <block wx:if="{{dianji}}">
-      <van-button size="mini" bindtap="shanchu">删除</van-button>
-    <van-button size="mini" bindtap="wancheng">完成</van-button>
+    <van-button size="mini" bindtap="anxia" wx:if="{{!item.anxia}}" data-id="{{item.id}}" >编辑</van-button>
+    <block wx:if="{{item.anxia}}">
+      <van-button size="mini" bindtap="shanchu" data-index="{{index}}">删除</van-button>
+    <van-button size="mini" bindtap="anxia"  wx:if="{{item.anxia}}" data-id="{{item.id}}">完成</van-button>
     </block>
   
  </view>
 </view>
 </view>
 </view>
-</view>
-<view class="wenzi-box"><view class="xiang-box">享</view> 已享商家满169元包邮</view>
 <van-submit-bar
-  price="{{ 3050 }}"
-  button-text="提交订单"
+  price="{{price}}"
+  button-text="結算"
   bind:submit="onClickButton"
   tip="{{ true }}"
 >
@@ -43,9 +42,9 @@
     <van-checkbox
   value="{{ checked }}"
   checked-color="#07c160"
-  bind:change="onChange"
+  bind:change="dianji"
 >
-
+全选
 </van-checkbox>
   </view>
 </van-submit-bar>

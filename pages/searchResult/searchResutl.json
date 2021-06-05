@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "free-com":"../../components/freeGood/freeGood"
+  },
+  "navigationBarTitleText":"搜索详情"
+}

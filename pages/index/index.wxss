@@ -2,14 +2,14 @@
 .header{
   height: 100%;
   position: relative;
-  line-height: 90rpx;
   text-align: center;
 }
 
 .header .search1{
   position: absolute;
   z-index: 100;
-  left: 220rpx;
+  left: 222rpx;
+  top: 15rpx;
   color: #999;
 }
 
@@ -19,7 +19,7 @@
   height: 60rpx;
   width: 100%;
   border-radius: 20px;
-  line-height: 30rpx;
+  line-height: 55rpx;
   font-size: 28rpx;
   text-align: center;
   color: #999;
@@ -48,6 +48,7 @@
 
 .goodsType .box view{
   margin:0 20rpx;
+  line-height: 90rpx;
 }
 
 
@@ -187,6 +188,7 @@
 .goodsChange text{
   color: #333;
   font-size: 14px;
+  margin-left: 20rpx;
 }
 
 /* 母婴板块 */
@@ -199,4 +201,55 @@
   width: 187rpx;
   height: 187rpx;
 }
+
+/* 搜索遮盖 */
+.searchCoverUp{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+}
+
+.searchBox{
+  z-index: 9999;
+  position: fixed;
+  height: 200rpx;
+  background: black;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  background: white;
+ 
+}
+
+.searchBox .searchHear{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+
+}
+
+.searchBox .searchHear van-search{
+  flex: 1;
+}
+
+.searchBox .searchHear .searchText{
+  padding-right: 20rpx;
+  color: #999;
+}
+
+.searchBox .search_links{
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items:center;
+  padding: 25rpx 20rpx;
+  color: #666;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
    
