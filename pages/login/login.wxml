@@ -1,0 +1,13 @@
+
+ <view class="login-box">
+  <!--<view class="login-top">
+    <image src="/picture/left.png"></image>
+    <view style="font-size:40rpx; color:#666666;">登录</view>
+    <navigator style="font-size:37rpx; color:#666666;">注册</navigator>
+  </view> -->
+  <view class="wx-login">
+    <view class="wx-wenzi">请授权登录</view>
+    <button class="btn" bindtap="login">微信授权登录</button>
+  </view>
+
+</view>

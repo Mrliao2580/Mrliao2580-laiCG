@@ -1,0 +1,310 @@
+@import "../../assets/css/icon.wxss";
+page{
+  background: #f5f5f5;
+}
+/* 没有地址 */
+.addressBox1{
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 10rpx dotted #eee;
+}
+.addressBox1 image{
+  height: 120rpx;
+  width: 124rpx;
+  margin-top: 20rpx;
+}
+
+.addressBox1 .content{
+  margin-bottom: 20rpx;
+}
+
+.addressBox1 .content .add{
+  color: #fe4070;
+}
+
+/*  有默认地址 */
+.addressBox2{
+  background: white;
+  display: flex;
+  align-items: center;
+  height: 120rpx;
+  padding: 20rpx;
+  border-bottom: 10rpx dotted #eee;
+  font-size: 24rpx;
+}
+
+.addressBox2 .detailContent{
+  display: flex;
+  height: 86rpx;
+  flex-direction: column;
+  margin-left: 30rpx;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.addressBox2 .detailContent .info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.addressBox2 .icon-youjiantou{
+  margin-left: 42rpx;
+}
+
+/* 收货方法 */
+.reeciptMode{
+  display: flex;
+  box-sizing: border-box;
+  height: 88rpx;
+  width: 1005;
+  background: white;
+  padding: 0 20rpx;
+  margin: 20rpx 0;
+  line-height: 88rpx;
+  font-size: 28rpx;
+}
+
+.reeciptMode .content{
+  flex: 1;
+  margin-left: 30rpx;
+  color: black;
+}
+
+/* 遮盖层 */
+.coverUp{
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+}
+
+.coverUp .display{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 35%;
+  background: white;
+}
+
+.article{
+  box-sizing: border-box;
+  background: white;
+}
+
+.article .shop{
+  height: 76rpx;
+  line-height: 76rpx;
+  color: #999;
+  font-size: 24rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.article .shop .imgs{
+  margin-left: 20rpx;
+}
+
+.article .shop .shopContent{
+  margin-left: 40rpx;
+}
+
+/* 商品规格 */
+.article .goodnorm{
+  display: flex;
+  align-items: center;
+  height: 168rpx;
+  padding: 0 20rpx;
+  border-bottom: 1px solid #eee;
+  
+}
+
+.article .goodnorm .goodbox{
+  display: flex
+}
+.article .goodnorm .goodbox .showImg{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.article .goodnorm .goodbox .norm{
+  display: flex;
+  flex-direction: column;
+  width: 460rpx;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+
+.article .goodnorm .goodbox .norm .goodTitle{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.article .goodnorm .goodbox .norm .goodNumber{
+  margin-top: 22rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  color: #999;
+  font-size: 20rpx;
+}
+
+.article .goodnorm .goodbox .price{
+  flex-direction: column;
+  display: flex;
+  justify-content: end;
+  margin-left: 38rpx;
+}
+
+.article .goodnorm .goodbox .price .number{
+  margin-left: 31rpx;
+  margin-top: 22rpx;
+  color: #999;
+  font-size: 20rpx;
+}
+
+.article .goodnorm .goodbox .price .money{
+  font-size: 24rpx;
+}
+
+/* 运费 */
+.shipping {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  height: 90rpx;
+  border-bottom: 1px solid #eee;
+
+}
+
+.shipping .content .cost{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.shipping .content .legend{
+  color: #999;
+}
+
+/* 现金券 */
+.article .cashVouchar{
+  position: relative;
+  height: 90rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  line-height: 90rpx;
+  font-size: 24rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.article .cashVouchar .temp{
+  border: 1rpx solid #999;
+  padding: 2rpx 8rpx;
+  height: 34rpx;
+  color: #999;
+  border-radius: 32rpx;
+  font-size: 20rpx;
+  margin-left: 26rpx;
+}
+
+.article .cashVouchar .use{
+  position:absolute;
+  right: 40rpx;
+}
+
+.article .cashVouchar .icon{
+  position:absolute;
+  right: 10rpx;
+  top: 5rpx;
+  color: #999;
+}
+
+.article .total{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  height: 90rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  line-height: 90rpx;
+  font-size: 24rpx;
+}
+
+.article .total .money{
+  color: #fe4070;
+  font-size: 26rpx;
+}
+
+/* 发票部分 */
+
+.invoice{
+  background: white;
+  margin: 40rpx 0 250rpx 0;
+}
+
+.invoice .invocieInfo,
+.invoice .gettInvoice{
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  height: 90rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  line-height: 90rpx;
+  font-size: 24rpx;
+}
+
+.invoice .invocieInfo{
+  color: #999;
+}
+
+.invoice .gettInvoice .caption{
+  margin-left: 30rpx;
+  color: #999;
+}
+
+/* 底部tabbat购买组件 */
+.tabbar{
+  position: fixed;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  border-top: 1px solid #eee;
+  background: white;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  align-items: center;
+  font-size:24rpx;
+}
+
+.tabbar .shopMoney .number{
+  color:#999
+}
+
+.tabbar .shopMoney view .price{
+  color: #fe4070;
+  font-size: 32rpx;
+}
+
+.tabbar .pay{
+  background:#fe4070 ;
+  width: 250rpx;
+  height: 72rpx;
+  text-align: center;
+  line-height: 72rpx;
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 1.125rem;
+}
+

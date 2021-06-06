@@ -1,0 +1,128 @@
+<view class="mine-box">
+    <!-- 导航栏 -->
+    <view class="mine-top">
+        <view class="top-left">
+            <image class="img" src="/picture/left.png"></image>
+        </view>
+        <view class="top-center">我的聚美</view>
+        <view class="top-right" bindtap="aaa">
+            <image src="/picture/home.png" class="img"></image>
+        </view>
+    </view>
+    <!-- 顶部按钮部分 -->
+    <view class="entry-box">
+        <!-- 头像 -->
+        <view class="entry-logo">
+            <image class="img" src="https://f3.jmstatic.com/static_account/dist/v1.0.183035/images/mobile_usercenter/myjumei/noportrait.png"></image>
+        </view>
+        <!-- 注册和登录按钮 -->
+        <view class="entry-btn">
+       
+            <view class="btn-box" bindtap="xianshi">
+                <block wx:if="{{!token}}">
+                <button class="btn" style="border-right:1px solid white; ">注册</button>
+                <navigator url="/pages/login/login"><button class="btn">登录</button></navigator> 
+            </block>
+            <block wx:else>
+                <button style="width:190rpx; height:84rpx;">更换头像</button>
+                 </block>
+            </view>
+       
+        
+           
+            
+        </view>
+    </view> 
+    <!-- 订单部分 -->
+    <view class="mine-menu">
+    <view class="menu-box">
+        <view class="menu-left">
+            <image class="img" src="/picture/dingdan.png"></image>
+            <view style="width:150rpx;">我的订单</view>
+        </view>
+       <navigator url="/pages/menu/menu?indexa=0">
+           <view class="menu-right">
+                 <view>查看我的订单</view>
+            <image class="img" src="/picture/right.png"></image>
+        </view>
+        </navigator>
+    </view>
+    <view class="pay-box">
+        <navigator url="/pages/menu/menu?indexa=1">
+            <view class="pay">
+            <image src="/picture/qianbao.png"></image>
+            <view class="wenzi">待付款</view>
+        </view>
+        </navigator>
+        <navigator url="/pages/menu/menu?indexa=2"> <view class="pay">
+            <image src="/picture/xiangzi.png"></image>
+            <view class="wenzi">待收货</view>
+        </view></navigator>
+        <!-- <navigator url="/pages/menu/menu?indexa=3"> <view class="pay"> -->
+        <navigator  bindtap="pingjia" url="/pages/menu/menu?indexa=3"> <view class="pay">
+            <image src="/picture/pjia.png"></image>
+            <view class="tuikuan">待评价</view>
+        </view></navigator>
+       <navigator url="/pages/drawback/drawback"> <view class="pay">
+            <image src="/picture//jine.png"></image>
+            <view class="wenzi">退货/退款</view>
+        </view></navigator>
+
+    </view>
+</view>
+    <view class="menoy-box">
+        <view class="menoy-top">
+            <image src="/picture/qian.png"></image>
+            <view>我的资产</view>
+        </view>
+        <view class="menoy-xuanxiang">
+           <navigator> <view class="xuanxiang">现金券</view></navigator>
+           <navigator><view class="xuanxiang">红包</view></navigator> 
+            <view class="xuanxiang">聚美金额</view>
+            <view class="xuanxiang">礼品卡</view>
+        </view>
+    </view>
+    <view class="xuanx">
+    <view class="xuanx-box">
+            <view class="xuanx-left">
+            <image src="/picture/erji.png"></image>
+            <view style="font-size:37rpx;color:#333333;">售后服务</view>
+        </view>
+        <image src="/picture/right.png"></image>
+    </view>
+    <view class="xuanx-box">
+            <view class="xuanx-left">
+            <image src="/picture/xinfeng.png"></image>
+            <view style="font-size:37rpx;color:#333333;">意见反馈</view>
+        </view>
+        <image src="/picture/right.png"></image>
+    </view>
+    <navigator url="/pages/dizhi/dizhi">  <view class="xuanx-box">
+            <view class="xuanx-left">
+            <image src="/picture/huoche.png"></image>
+            <view style="font-size:37rpx;color:#333333;">收获地址</view>
+        </view>
+        <image src="/picture/right.png"></image>
+    </view></navigator>
+  
+    <view class="xuanx-box">
+            <view class="xuanx-left">
+            <image src="/picture/tuichu.png"></image>
+            <view style="font-size:37rpx;color:#333333;">退出登录</view>
+        </view>
+        <image src="/picture/right.png"></image>
+    </view>
+    <view class="xuanx-box">
+            <view class="xuanx-left">
+            <image src="/picture/dianhua.png"></image>
+            <view style="font-size:37rpx;color:#333333;">440-001-0888</view>
+        </view>
+        <image src="/picture/right.png"></image>
+    </view>
+    </view>
+    <view class="miaosu">
+        <view style="height:35rpx;">客服热线400-001-0888(9:00-18:00)</view>  
+        拨打前请记录您的UID 0
+        
+    </view>
+</view>

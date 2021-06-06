@@ -1,0 +1,44 @@
+<block wx:if="{{imgIndex == 0}}">
+  <view class="overseas">
+    <image src="http://images.jumei.com/mobile/act/activities/2014_12/1207_hailin/zhigou_icon.jpg"></image>
+    <view class="title">海外直供</view>
+    <view  class="box">
+      <view>所有商品均在海外生成或海外销售</view>
+      <view class="contont">极速海淘商品提前直邮到保税区</view>
+      <view>海外直邮商品通过国际物流由商家直邮给你</view>
+      <view class="contont">商品均在海外认证商家供货</view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{imgIndex == 1}}">
+  <view class="overseas">
+    <image src="http://images.jumei.com/mobile/act/activities/2014_12/1207_hailin/zhengpin_icon.jpg"></image>
+    <view class="title">海外正品 低价保证</view>
+    <view  class="box">
+      <view>海外当地采购，品牌授权供货</view>
+      <view class="contont">让你买到更多国内买不到的大牌</view>
+      <view>经过严格鉴定的专业招商团队</view>
+      <view class="contont">仅采提供正规认证商家品牌，从源头保证正品</view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{imgIndex == 2}}">
+  <view class="overseas">
+    <image src="http://images.jumei.com/mobile/act/activities/2014_12/1207_hailin/jisu_icon.jpg"></image>
+    <view class="title">极速到货</view>
+    <view  class="box">
+      <view>极速免锐店，最快24小时到货</view>
+      <view class="contont">海外直邮商品，7天至20天左右到货，具体到货时间参考商品详情页提示。</view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{imgIndex == 3}}">
+  <view class="overseas">
+    <image src="http://images.jumei.com/mobile/act/activities/2014_12/1207_hailin/7icon.jpg"></image>
+    <view class="title">七天之内无条件退货</view>
+    <view  class="box">
+      <view>承诺 “7天之内条件退货” 服务</view>
+      <view class="contont">母婴、高单价等特殊商品除外</view>
+    </view>
+  </view>
+</block>

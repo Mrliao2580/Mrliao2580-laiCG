@@ -1,0 +1,60 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "pathName": "pages/goodsDetail/goodsDetail",
+          "name": "pages/dizhi/dizhi",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/tianjia/tianjia",
+          "pathName": "pages/tianjia/tianjia",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop-car/shop-car",
+          "pathName": "pages/shop-car/shop-car",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "legend",
+          "pathName": "pages/legend/legend",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "settlement",
+          "pathName": "pages/settlement/settlement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "address",
+          "pathName": "pages/addaddress/address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "sub/editAddress",
+          "pathName": "subcontract/pages/editAddress/editAddress",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

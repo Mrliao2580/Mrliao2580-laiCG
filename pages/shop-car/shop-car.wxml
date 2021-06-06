@@ -1,0 +1,51 @@
+
+<view class="shop-car" wx:for="{{data}}">
+  <view class="fuxuan-box">
+    <van-checkbox
+  value="{{ item.checked }}"
+  checked-color="#07c160"
+  bind:change="onChange"
+  data-index="{{index}}"
+>
+</van-checkbox>
+</view>
+<view class="car-image">
+  <image src="{{item.gs_img}}"></image></view>
+<view class="car-miaosu">
+  <view class="miaosu" >{{item.title}}</view>
+ 
+  <view class="shuliang">
+    <van-stepper value="{{ item.detail }}" bind:plus="zengjia" bind:change="bujinqi" data-index="{{index}}" wx:if="{{item.anxia}}"/>
+  <view class="guige" wx:if="{{!item.anxia}}">90ml</view>
+<view class="jishu">x{{item.detail}}</view>
+</view>
+<view class="jiage-box">
+ <view class="jiage">￥{{item.jumei_price}}</view> 
+  <view slot="footer" class="anniu">
+    <van-button size="mini" bindtap="anxia" wx:if="{{!item.anxia}}" data-id="{{item.id}}" >编辑</van-button>
+    <block wx:if="{{item.anxia}}">
+      <van-button size="mini" bindtap="shanchu" data-index="{{index}}">删除</van-button>
+    <van-button size="mini" bindtap="anxia"  wx:if="{{item.anxia}}" data-id="{{item.id}}">完成</van-button>
+    </block>
+  
+ </view>
+</view>
+</view>
+</view>
+<van-submit-bar
+  price="{{price}}"
+  button-text="結算"
+  bind:submit="onClickButton"
+  tip="{{ true }}"
+>
+<view class="fuxuans">
+    <van-checkbox
+  value="{{ checked }}"
+  checked-color="#07c160"
+  bind:change="dianji"
+>
+全选
+</van-checkbox>
+  </view>
+</van-submit-bar>
+<van-dialog id="van-dialog" />

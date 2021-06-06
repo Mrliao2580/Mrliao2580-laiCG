@@ -1,0 +1,10 @@
+
+<mp-tabs 
+  tabs="{{tabs}}" 
+  activeTab="{{indexa}}" 
+  swiperClass="weui-tabs-swiper"
+  bindtabclick="onTabClick"
+  bindchange="onChange"
+  activeClass="tab-bar-title__selected"
+>
+</mp-tabs>
