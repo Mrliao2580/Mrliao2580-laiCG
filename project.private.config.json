@@ -13,19 +13,12 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/index/index",
-          "pathName": "components/freeGood/freeGood",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "goodsdetail",
           "pathName": "pages/goodsDetail/goodsDetail",
           "query": "",
           "scene": null
         },
         {
-
           "name": "pages/mingpin/mingpin",
           "pathName": "pages/mingpin/mingpin",
           "query": "",
@@ -34,6 +27,24 @@
         {
           "name": "legend",
           "pathName": "pages/legend/legend",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "settlement",
+          "pathName": "pages/settlement/settlement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "address",
+          "pathName": "pages/addaddress/address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "sub/editAddress",
+          "pathName": "subcontract/pages/editAddress/editAddress",
           "query": "",
           "scene": null
         }

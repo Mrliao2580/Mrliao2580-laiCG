@@ -1,8 +1,5 @@
 {
-  "name": "Mrliao2580-laiCG",
-  "version": "1.0.0",
-  "description": "",
-  "name": "mrliao2580-laicg",
+  "name": "lai",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
@@ -10,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mrliao2580/Mrliao2580-laiCG.git"
+    "url": "git+ssh://git@github.com/Mrliao2580/Mrliao2580-laiCG.git"
   },
   "keywords": [],
   "author": "",
@@ -19,10 +16,9 @@
     "url": "https://github.com/Mrliao2580/Mrliao2580-laiCG/issues"
   },
   "homepage": "https://github.com/Mrliao2580/Mrliao2580-laiCG#readme",
+  "description": "",
   "dependencies": {
-    "@miniprogram-component-plus/tabs": "^1.0.0"
-  },
-  "vant-weapp": "^0.5.29",
-  "devDependencies": {},
-  "description": ""
+    "@vant/weapp": "^1.6.8",
+    "vant-weapp": "^0.5.29"
+  }
 }

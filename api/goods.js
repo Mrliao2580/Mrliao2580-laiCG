@@ -74,3 +74,31 @@ module.exports.fetchSearchData = function(value) {
     }
   })
 }
+
+// 存入用户地址接口
+module.exports.depositAddress = function({token,name,tel,isDefault,addressDetail,addressAll}) {
+  return request({
+    url:`http://lcg.zhengxl.show/api/addaddress`,
+    method:"post",
+    data:{
+      token,
+      name,
+      tel,
+      isDefault,
+      addressDetail,
+      addressAll
+    }
+  })
+}
+
+// 获取用户地址
+module.exports.fetchuserAddress = function(token) {
+  return request({
+    url:`http://lcg.zhengxl.show/api/getaddress`,
+    method:"GET",
+    data:{
+      token
+    }
+  })
+}
+
