@@ -1,11 +1,12 @@
 .motherGoods{
   width: 100%;
-  height: 500rpx;
+  height: 400rpx;
   padding-bottom: 25rpx;
 }
 
 .motherGoods .itmcontent image{
   width: 100%;
+  height: 320rpx;
 }
 
 .motherGoods .itmcontent{

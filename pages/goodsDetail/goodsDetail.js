@@ -93,9 +93,11 @@ Page({
       })
       console.log(this.data.good_id)
       wx.setStorageSync('good_id', this.data.good_id),
+    
       wx.showToast({
         title: '加入购物车成功',
       })
+      
     } else{
       wx.showToast({
         title: '登录失败',
@@ -105,7 +107,16 @@ Page({
       })
     } 
   },
-
+shopcar(){
+  wx.switchTab({
+    url: '/pages/shop-car/shop-car',
+  })
+},
+gobuy(){
+  wx.navigateTo({
+    url: '/pages/dingdan/dingdan',
+  })
+},
   // 点击跳转到商品详情页
   async goodsDetail(){
     let goods_id = this.data.goodData;

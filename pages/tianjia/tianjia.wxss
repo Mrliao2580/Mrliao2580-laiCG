@@ -1,0 +1,19 @@
+.baocun{
+  margin-top:10rpx;
+  width: 100%;
+  height:50rpx;
+  display: flex;
+  justify-content: space-between;
+  line-height: 50rp;
+}
+.baocun-btn{
+  width: 100%;
+  position:fixed;
+  bottom: 100rpx;
+}
+.baocun-btn button{
+  width: 400rpx;
+  color:white;
+  background:#fe4070;
+  border-radius: 100rpx;
+}

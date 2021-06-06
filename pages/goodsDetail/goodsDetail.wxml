@@ -142,11 +142,12 @@
     </view>
     <view class="shopping-cart">
       <i class="iconfont icon-line-shoppingbaggouwubao-01"></i>
-      <text>购物车</text>
+      <text bindtap="shopcar">购物车</text>
     </view>
     <view class="button-block">
       <view class="joinShop" bindtap="addShopping">加入购物车</view>
       <view class="nowBuy"  bindtap="buynow">立刻购买</view>
+      <view class="nowBuy" bindtap="gobuy">立刻购买</view>
     </view>
   </view>
 </van-tabs>

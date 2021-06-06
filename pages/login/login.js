@@ -22,17 +22,22 @@ login(){
       console.log(res.code)
           let data = await getlogin(res.code)
           let token = data.token
+          console.log('data',data)
       if(res.code){
         if(token){
           settoken(data.token)
+          
           console.log('data.token',data.token)
           wx.showToast({
             title: '登录成功',
 
           })
+
           wx.switchTab({
             url: '../../pages/index/index',
           })
+
+         
         }else{
           wx.showToast({
             title: '登录失败',

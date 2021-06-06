@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index",  
+    "van-area": "@vant/weapp/area/index",
+    "van-switch": "@vant/weapp/switch/index"
+  }
+}

@@ -102,3 +102,15 @@ module.exports.fetchuserAddress = function(token) {
   })
 }
 
+module.exports.getgoodscar = function(goods_id){
+  return request({
+    url:`http://lcg.zhengxl.show/api/goodIdInfo?goods_id=${goods_id}`,
+    method:"GET"
+  })
+} 
+module.exports.tijiao = function(){
+  return request({
+    url:"http://lcg.zhengxl.show/api/commitorder",
+    method:"POST"
+  })
+}
