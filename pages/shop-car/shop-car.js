@@ -1,5 +1,6 @@
- let {getgoodscar} = require('../../api/goods')
+ let {getgoodscar,loadOrder} = require('../../api/goods')
  let {commit} = require('../../api/order')
+ let {gettoken} = require('../../utils/util')
 import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog'
 Page({
 
@@ -23,6 +24,7 @@ Page({
    */
   onLoad: function (options) {
       this.goodscar()
+      this.loadOrder()
   },
 
  
@@ -75,7 +77,19 @@ plus(){
    })
   },
   // 提交按钮
-   onClickButton(e){
+   async onClickButton(e){
+     let token = this.gettoken
+     let canshu = { 
+       token : token,
+       phone_number:123,
+       address:'asd',
+       number:1,
+       tital_price:1,
+       name:"tyf",
+       goods_id:1
+      };
+     
+     let restro = await loadOrder(canshu);
      let data = this.data.data
      console.log(data)
     let array = []

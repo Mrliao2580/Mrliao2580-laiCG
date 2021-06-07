@@ -1,10 +1,235 @@
 
-<mp-tabs 
-  tabs="{{tabs}}" 
-  activeTab="{{indexa}}" 
-  swiperClass="weui-tabs-swiper"
-  bindtabclick="onTabClick"
-  bindchange="onChange"
-  activeClass="tab-bar-title__selected"
->
-</mp-tabs>
+<van-tabs active="{{ indexa }}" bind:change="onChange">
+  <van-tab title="全部">
+    <view class="dingdan-box" wx:for="{{orderDetail}}">
+      <view class="top-hezi">
+    <view class="dingdan-img">
+      <image src="{{item.gs_img}}"></image>
+    </view>
+    <view class="dingdan-neiron">
+      <view class="dingdan-left">
+        <view class="left-neiron">{{item.title}}</view>
+      </view>
+      <view class="dingdan-right">
+        <view class='right-jiage'>{{item.jumei_price}}</view>
+        <view class='right-shuliang'>x{{item.number}}</view>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{item.status == item.status}}">
+    <view class="anniu" >
+    <view>
+      <button size="mini">更多</button>
+    </view>
+    <view>
+      <button size="mini">修改地址</button>
+      <block wx:if="{{item.status == 1}}">
+      <button size="mini">提交订单</button>
+      </block>
+      <!-- <button size="mini">提交订单</button> -->
+      <block wx:if="{{item.status == 2}}">
+      <button size="mini">催发货</button>
+    </block>
+    <block wx:if="{{item.status == 3}}">
+      <button size="mini">待收货</button>
+    </block>
+    <block wx:if="{{item.status == 4}}">
+      <button size="mini">待评价</button>
+    </block>
+    </view>
+  </view>
+</block>
+<block wx:if="{{item.status !== item.status}}">
+  <view class="anniu"></view>
+</block>
+  </view>
+  </van-tab>
+
+  <van-tab title="待付款">
+    <view class="dingdan-box" wx:for="{{orderDetail}}">
+      <view class="top-hezi">
+    <view class="dingdan-img">
+      <image src="{{item.gs_img}}"></image>
+    </view>
+    <view class="dingdan-neiron">
+      <view class="dingdan-left">
+        <view class="left-neiron">{{item.title}}</view>
+      </view>
+      <view class="dingdan-right">
+        <view class='right-jiage'>{{item.jumei_price}}</view>
+        <view class='right-shuliang'>x{{item.number}}</view>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{item.status == item.status}}">
+    <view class="anniu" >
+    <view>
+      <button size="mini">更多</button>
+    </view>
+    <view>
+      <button size="mini">修改地址</button>
+      <block wx:if="{{item.status == 1}}">
+      <button size="mini">提交订单</button>
+      </block>
+      <!-- <button size="mini">提交订单</button> -->
+      <block wx:if="{{item.status == 2}}">
+      <button size="mini">催发货</button>
+    </block>
+    <block wx:if="{{item.status == 3}}">
+      <button size="mini">待收货</button>
+    </block>
+    <block wx:if="{{item.status == 4}}">
+      <button size="mini">待评价</button>
+    </block>
+    </view>
+  </view>
+</block>
+<block wx:if="{{item.status !== item.status}}">
+  <view class="anniu"></view>
+</block>
+  </view>
+</van-tab>
+
+  <van-tab title="代发货">
+    <view class="dingdan-box" wx:for="{{orderDetail}}">
+      <view class="top-hezi">
+    <view class="dingdan-img">
+      <image src="{{item.gs_img}}"></image>
+    </view>
+    <view class="dingdan-neiron">
+      <view class="dingdan-left">
+        <view class="left-neiron">{{item.title}}</view>
+      </view>
+      <view class="dingdan-right">
+        <view class='right-jiage'>{{item.jumei_price}}</view>
+        <view class='right-shuliang'>x{{item.number}}</view>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{item.status == item.status}}">
+    <view class="anniu" >
+    <view>
+      <button size="mini">更多</button>
+    </view>
+    <view>
+      <button size="mini">修改地址</button>
+      <block wx:if="{{item.status == 1}}">
+      <button size="mini">提交订单</button>
+      </block>
+      <!-- <button size="mini">提交订单</button> -->
+      <block wx:if="{{item.status == 2}}">
+      <button size="mini">催发货</button>
+    </block>
+    <block wx:if="{{item.status == 3}}">
+      <button size="mini">待收货</button>
+    </block>
+    <block wx:if="{{item.status == 4}}">
+      <button size="mini">待评价</button>
+    </block>
+    </view>
+  </view>
+</block>
+<block wx:if="{{item.status !== item.status}}">
+  <view class="anniu"></view>
+</block>
+  </view>
+  </van-tab>
+
+  <van-tab title="待收货">
+    <view class="dingdan-box" wx:for="{{orderDetail}}">
+      <view class="top-hezi">
+    <view class="dingdan-img">
+      <image src="{{item.gs_img}}"></image>
+    </view>
+    <view class="dingdan-neiron">
+      <view class="dingdan-left">
+        <view class="left-neiron">{{item.title}}</view>
+      </view>
+      <view class="dingdan-right">
+        <view class='right-jiage'>{{item.jumei_price}}</view>
+        <view class='right-shuliang'>x{{item.number}}</view>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{item.status == item.status}}">
+    <view class="anniu" >
+    <view>
+      <button size="mini">更多</button>
+    </view>
+    <view>
+      <button size="mini">修改地址</button>
+      <block wx:if="{{item.status == 1}}">
+      <button size="mini">提交订单</button>
+      </block>
+      <!-- <button size="mini">提交订单</button> -->
+      <block wx:if="{{item.status == 2}}">
+      <button size="mini">催发货</button>
+    </block>
+    <block wx:if="{{item.status == 3}}">
+      <button size="mini">待收货</button>
+    </block>
+    <block wx:if="{{item.status == 4}}">
+      <button size="mini">待评价</button>
+    </block>
+    </view>
+  </view>
+</block>
+<block wx:if="{{item.status !== item.status}}">
+  <view class="anniu"></view>
+</block>
+</view>
+  </van-tab>
+
+  <van-tab title="待评价">
+    <view class="dingdan-box" wx:for="{{orderDetail}}">
+      <view class="top-hezi">
+    <view class="dingdan-img">
+      <image src="{{item.gs_img}}"></image>
+    </view>
+    <view class="dingdan-neiron">
+      <view class="dingdan-left">
+        <view class="left-neiron">{{item.title}}</view>
+      </view>
+      <view class="dingdan-right">
+        <view class='right-jiage'>{{item.jumei_price}}</view>
+        <view class='right-shuliang'>x{{item.number}}</view>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{item.status == item.status}}">
+    <view class="anniu" >
+    <view>
+      <button size="mini">更多</button>
+    </view>
+    <view>
+      <button size="mini">修改地址</button>
+      <block wx:if="{{item.status == 1}}">
+      <button size="mini">提交订单</button>
+      </block>
+      <!-- <button size="mini">提交订单</button> -->
+      <block wx:if="{{item.status == 2}}">
+      <button size="mini">催发货</button>
+    </block>
+    <block wx:if="{{item.status == 3}}">
+      <button size="mini">待收货</button>
+    </block>
+    <block wx:if="{{item.status == 4}}">
+      <button size="mini">待评价</button>
+    </block>
+    </view>
+  </view>
+</block>
+<block wx:if="{{item.status !== item.status}}">
+  <view class="anniu"></view>
+</block> <view class="anniu" >
+    <view>
+      <button size="mini">更多</button>
+    </view>
+    <view>
+      <button size="mini">修改地址</button>
+      
+    </view>
+  </view>
+  </view>
+  </van-tab>
+</van-tabs>

@@ -24,7 +24,7 @@
                 <navigator url="/pages/login/login"><button class="btn">登录</button></navigator> 
             </block>
             <block wx:else>
-                <button style="width:190rpx; height:84rpx;">更换头像</button>
+                <button style="width:190rpx; height:84rpx; font-size:30rpx; line-height:84rpx; " >更换头像</button>
                  </block>
             </view>
        
@@ -47,6 +47,8 @@
         </view>
         </navigator>
     </view>
+
+
     <view class="pay-box">
         <navigator url="/pages/menu/menu?indexa=1">
             <view class="pay">

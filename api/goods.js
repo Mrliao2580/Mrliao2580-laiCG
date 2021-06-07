@@ -86,3 +86,28 @@ module.exports.tijiao = function(){
     method:"POST"
   })
 }
+module.exports.dindan = function(token){
+  return request({
+    url:"http://lcg.zhengxl.show/api/userorder",
+    data:{
+      token
+    },
+    method:"POST"
+  })
+}
+module.exports.loadOrder = function(canshu){
+  return request({
+    url:"http://lcgpay.zhengxl.show/api/wxpay",
+    data:{
+      token:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOnsib3BlbmlkIjoibzAxcjA1Q2NscXFzLWdzT2M3R3NzWllETlQyRSJ9LCJpYXQiOjE2MjI3Nzg2ODMsImV4cCI6MTYyMzY0MjY4M30.2qWOwATYe27BK_hz_d7h6Tt9gqhxZ9W8nJvKzFhBtYU',
+      phone_number:123,
+       address:'asd',
+       number:1,
+       tital_price:1,
+       name:"tyf",
+       goods_id:1
+    },
+    method:"POST"
+  })
+}
+

@@ -18,6 +18,7 @@
     placeholder="请输入手机号"
     border="{{ false }}"
     bind:input = "shouji"
+    bind:blur ="panduan"
   />
 </van-cell-group>
 <van-area area-list="{{ areaList }}" item-height="30" bind:confirm="dizhi" />
@@ -30,6 +31,8 @@
     autosize
     border="{{ false }}"
     bind:input="youzheng"
+    bind:blur ="bianma"
+
   />
 </van-cell-group>
 <van-cell-group>
