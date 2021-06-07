@@ -1,0 +1,101 @@
+.goodsType{
+  height: 100rpx;
+}
+
+.goodsType .box{
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  border-bottom: 2rpx solid #eee;
+}
+
+.goodsType .box view{
+  margin:0 20rpx;
+  line-height: 90rpx;
+}
+
+
+/* .goodsType .box .goodsBox{
+  box-sizing: border-box;
+} */
+
+.goodsType .box .goodsBox .name{
+  font-size: 28rpx;
+  color: #666;
+}
+
+.hidden{
+  color: #fe4070;
+  height: 80rpx;
+  /* line-height: 60rpx; */
+  border-bottom: 6rpx solid #fe4070;
+}
+
+
+.imgs{
+  position:relative;
+}
+.imgs image{
+  width: 100%;
+}
+
+.imgs .assess{
+  position: absolute;
+  left: 0;
+  bottom:80rpx;
+  border: .0625rem solid #eee;
+  border-left: 0;
+  border-top-right-radius: 1.5625rem;
+  border-bottom-right-radius: 1.5625rem;
+  color: #666;
+  background: rgba(251,251,251,.8);
+}
+
+.title{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  font-size: 14px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.title .people{
+  color: #fe4070;
+  margin-right: 10rpx;
+}
+
+.content{
+  display: flex;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .price{
+  display: flex;
+  flex-direction: column;
+}
+
+.content .price .ct-price{
+  font-size: 36rpx;
+  color: #fe4070;
+}
+
+.content .price .ht-price{
+  font-size: 22rpx;
+  color: #999;
+}
+
+.content .GroudBuy{
+  border-radius: 25px;
+  width: 176rpx;
+  height: 52rpx;
+  background: #fe4070;
+  text-align: center;
+  line-height: 52rpx;
+  color: white;
+
+}
+  

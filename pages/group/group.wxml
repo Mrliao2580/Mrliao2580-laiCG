@@ -1,0 +1,31 @@
+<scroll-view scroll-x class="goodsType">
+    <view class="box" >
+        <view wx:for="{{goodsdata}}" goodsdata="{{goodsdata}}" wx:key="index" class="goodsBox">
+          <block wx:if="{{changeStyle == index}}">
+            <view class="name hidden" bindtap="selected" data-index="{{index}}">{{item}}</view>
+          </block>
+          <block wx:else>
+            <view class="name" bindtap="selected" data-index="{{index}}">{{item}}</view>
+          </block>
+        </view>
+    </view>
+  </scroll-view>
+
+  <!-- 推荐 -->
+  <block >
+    <view class="imgs">
+      <image node="widthFix" src="http://mp6.jmstatic.com/product/005/222/5222788_std/5222788_1000_1000.jpg?v=1621819476&imageView2/2/w/440/q/90"></image>
+      <text class="assess">2条评论</text>
+    </view>
+    <view class="title">
+      <text class="people">[2人团]</text>【手机转向阀圣诞快乐房间爱上了快递费结案率】
+    </view>
+    <view class="content">
+      <view class="price">
+        <text class="ct-price">￥118</text>
+        <text class="ht-price">单价买￥299</text>
+      </view>
+      <text class="GroudBuy">去开团</text>
+    </view>
+  </block>
+
