@@ -1,0 +1,103 @@
+<!-- 没有地址 -->
+<block wx:if="{{isShowAddress}}">
+  <view class="addressBox1" bindtap="addAddress">
+    <image src="/public/image/address.png"></image>
+    <view class="content">
+      还没有收货地址，<text class="add">去添加</text>
+    </view>
+  </view>
+</block>
+<!-- 有默认地址-->
+<block wx:if="{{!isShowAddress}}">
+  <view class="addressBox2" bindtap="editAddress">
+    <i class="iconfont icon-dingwei"></i>
+    <view class="detailContent">
+      <view class="info">
+        <text>收货人:{{idDefatul.name}}</text>
+        <text>{{idDefatul.tel}}</text>
+      </view>
+      <view class="fullDetail">{{idDefatul.addressAll}}{{idDefatul.addressDetail}}</view>
+    </view>
+    <i class="iconfont icon-youjiantou"></i>
+  </view>
+</block>
+<!-- 收穫方法 -->
+<view class="reeciptMode" bindtap="delivery">
+  <i class="iconfont icon-line-shoppingbaggouwubao-01"></i>
+  <text class="content">{{columns[indexcolumns]}}</text>
+  <i class="iconfont icon-youjiantou"></i>
+</view>
+<!-- 收货方式遮盖层 -->
+<view class="coverUp" bindtap="cover" wx:if="{{isShow}}">
+  <view class="display" catchtap="delivery">
+    <van-picker columns="{{ columns }}" bind:change="onChange" />
+  </view>
+</view>
+<!-- 商品详细 -->
+<view class="article">
+  <!-- 店鋪名稱 -->
+  <view class="shop">
+    <i class="iconfont icon-dianpu imgs"></i>
+    <text class="shopContent">鸿蒙电子商务发货</text>
+  </view>
+  <!-- 商品规格 -->
+  <view class="goodnorm">
+    <view class="goodbox">
+      <image  class="showImg" src="{{goodDeatail.lunbo_img}}"></image>
+      <view class="norm">
+        <text class="goodTitle">【聚美优品正品包邮】 【买1增1】</text>
+        <text class="goodNumber">{{goodDeatail.title}}</text>
+      </view>
+      <view class="price">
+        <text class="money">￥{{goodDeatail.jumei_price}}</text>
+        <text class="number">X1</text>
+      </view>
+    </view>
+  </view>
+  <!-- 运费 -->
+  <view class="shipping">
+    <view class="title">运费</view>
+    <view class="content">
+      <view class="cost">快递：￥0</view>
+      <text class="legend">新用户满39元包邮（新疆部分地区除外），已减免￥10</text>
+    </view>
+  </view> 
+  <!-- 现金券 -->
+  <view class="cashVouchar">
+    <text>现金券</text>
+    <text class="temp">暂无可用</text>
+    <text class="use">使用现金券</text>
+    <i class="iconfont icon-youjiantou icon"></i>
+  </view>
+  <!-- 红包 -->
+  <view class="cashVouchar">
+    <text>红包</text>
+    <text class="temp">暂无可用</text>
+    <text class="use">使用红包</text>
+    <i class="iconfont icon-youjiantou icon"></i>
+  </view>
+  <!-- 合计 -->
+  <view class="total">
+    <text>合计</text>
+    <text class="money">￥{{goodDeatail.jumei_price}}</text>
+  </view>
+</view>
+<!-- 发票部分 -->
+<view class="invoice">
+  <view class="invocieInfo">
+    <text>发票</text>
+  </view>
+  <view class="gettInvoice">
+    <text>索要发票</text>
+    <text class="caption">你购买的商品暂不支持开具发票</text>
+  </view>
+</view>
+
+<!-- 底部tabbat购买组件 -->
+<view class="tabbar">
+  <view class="shopMoney">
+    <view class="number">共一件商品</view>
+    <view>合计<text class="price"> ￥{{goodDeatail.jumei_price}}</text></view>
+  </view>
+  <view class="pay" bindtap="pay">微信支付</view>
+</view>

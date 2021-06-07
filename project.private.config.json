@@ -13,8 +13,8 @@
     "miniprogram": {
       "list": [
         {
+          "pathName": "pages/goodsDetail/goodsDetail",
           "name": "pages/dizhi/dizhi",
-          "pathName": "pages/dizhi/dizhi",
           "query": "",
           "scene": null
         },
@@ -33,6 +33,24 @@
         {
           "name": "legend",
           "pathName": "pages/legend/legend",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "settlement",
+          "pathName": "pages/settlement/settlement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "address",
+          "pathName": "pages/addaddress/address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "sub/editAddress",
+          "pathName": "subcontract/pages/editAddress/editAddress",
           "query": "",
           "scene": null
         }

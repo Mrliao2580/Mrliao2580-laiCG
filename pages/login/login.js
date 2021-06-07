@@ -1,5 +1,5 @@
 const {getuser,getlogin,getphone} = require('../../api/loginapi')
-const {gettoken,settoken} = require('../../utils/util')
+const {gettoken,settoken} = require('../../utils/utils')
 Page({
 
   /**

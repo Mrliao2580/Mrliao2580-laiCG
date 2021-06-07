@@ -74,6 +74,34 @@ module.exports.fetchSearchData = function(value) {
     }
   })
 }
+
+// 存入用户地址接口
+module.exports.depositAddress = function({token,name,tel,isDefault,addressDetail,addressAll}) {
+  return request({
+    url:`http://lcg.zhengxl.show/api/addaddress`,
+    method:"post",
+    data:{
+      token,
+      name,
+      tel,
+      isDefault,
+      addressDetail,
+      addressAll
+    }
+  })
+}
+
+// 获取用户地址
+module.exports.fetchuserAddress = function(token) {
+  return request({
+    url:`http://lcg.zhengxl.show/api/getaddress`,
+    method:"GET",
+    data:{
+      token
+    }
+  })
+}
+
 module.exports.getgoodscar = function(goods_id){
   return request({
     url:`http://lcg.zhengxl.show/api/goodIdInfo?goods_id=${goods_id}`,
@@ -86,6 +114,7 @@ module.exports.tijiao = function(){
     method:"POST"
   })
 }
+
 module.exports.dindan = function(token){
   return request({
     url:"http://lcg.zhengxl.show/api/userorder",
@@ -111,3 +140,31 @@ module.exports.loadOrder = function(canshu){
   })
 }
 
+
+  // 修改用户地址接口
+  module.exports.changeAddress = function({name,tel,addressDetail,addressAll,token,id}) {
+    return request({
+      url:`http://lcg.zhengxl.show/api/updateaddress`,
+      method:"POST",
+      data:{
+        token,
+        id,
+        tel,
+        name,
+        addressDetail,
+        addressAll
+      }
+    })
+  }
+
+  // 删除地址接口
+  module.exports.deleteAddress = function({token,id}){
+    return request({
+      url:"http://lcg.zhengxl.show/api/deladdress",
+      method:"POST",
+      data:{
+        token,
+        id
+      }
+    })
+  }

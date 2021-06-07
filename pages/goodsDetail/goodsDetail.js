@@ -1,5 +1,5 @@
 let { getlogin } = require("../../api/loginapi");
-let { gettoken,dateDiff } = require("../../utils/util");
+let { gettoken,dateDiff } = require("../../utils/utils");
 let { fetchGoodDetail } = require("../../api/goods");
 // pages/goodsDetail/goodsDetail.js
 Page({
@@ -112,11 +112,6 @@ shopcar(){
     url: '/pages/shop-car/shop-car',
   })
 },
-gobuy(){
-  wx.navigateTo({
-    url: '/pages/dingdan/dingdan',
-  })
-},
   // 点击跳转到商品详情页
   async goodsDetail(){
     let goods_id = this.data.goodData;
@@ -134,6 +129,21 @@ gobuy(){
       goodDetail:message[0]
     });
    
+  },
+
+  // 立刻购买事件
+  buynow(){
+    let token = wx.getStorageSync('token');
+    if(token == ''){
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+      return;
+    }
+    let goods_id = this.data.goods_id;
+    wx.navigateTo({
+      url: `/pages/settlement/settlement?goods_id=${goods_id}`,
+    })
   },
 
   /**

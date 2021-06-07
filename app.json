@@ -21,7 +21,9 @@
     "pages/goodsDetail/goodsDetail",
     "pages/legend/legend",
     "pages/postage/postage",
-    "pages/searchResult/searchResutl"
+    "pages/searchResult/searchResutl",
+    "pages/settlement/settlement",
+    "pages/addaddress/address"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,7 +31,17 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json",
+  "subPackages": [
+    {
+      "root":"subcontract",
+      "name":"subcontract",
+      "pages": [
+        "pages/editAddress/editAddress",
+        "pages/rewriteAddress/rewriteAddress"
+      ],
+      "independent": false
+    }
+  ],
   "tabBar": {
     "list": [{
       "pagePath": "pages/index/index",
@@ -57,5 +69,6 @@
     }
   ],
     "selectedColor": "#fe4070"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
