@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "mp-tabs": "@miniprogram-component-plus/tabs",
-    "shopping":"../../components/group-buying/group-buying"
-  }
-}
