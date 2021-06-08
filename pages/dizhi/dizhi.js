@@ -1,4 +1,6 @@
 let {morendizhi} = require('../../api/dizhi')
+const {gettoken,settoken} = require('../../utils/util')
+
 Page({
 
   /**
@@ -18,12 +20,14 @@ Page({
   },
   async getmoren(){
     let isDefault = 0;
-    let data = await morendizhi()
-    console.log(data)
-    data.forEach(item=>{
-      item.isDefault =  (item.isDefault == 0) ? false : true
+    let token = gettoken()
+    console.log('aaa',token)
+    let data = await morendizhi(token)
+    console.log('ccc',data)
+    // data.forEach(item=>{
+    //   item.isDefault =  (item.isDefault == 0) ? false : true
      
-    })
+    // })
     
     this.setData({
     morendizhi:data,

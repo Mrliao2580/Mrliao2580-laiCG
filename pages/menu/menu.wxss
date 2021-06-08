@@ -40,3 +40,77 @@
   color: #999;
   margin-top: 10  rpx;
 }
+.weui-tabs-bar__item{
+  width: 150rpx;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.weui-tabs-swiper{
+  width: 100vw;
+  height: 100vh;
+}
+.dingdan-box{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 320rpx;
+  border-bottom:1rpx solid #bebebe;
+  display: flex;
+  flex-direction:column;
+}
+.top-hezi{
+  height: 320rpx;
+  width: 100%;
+  display:flex;
+}
+.dingdan-img{
+  width: 200rpx;
+  height: 200rpx;
+}
+.dingdan-img image{
+  vertical-align: middle;
+  width: 200rpx;
+  height: 200rpx;
+}
+.dingdan-neiron{
+  width:100%;
+  margin-left: 20rpx;
+  height: 200rpx;
+  display: flex;
+}
+.dingdan-left{
+  width: 400rpx;
+  height: 200rpx;
+  background:white;
+}
+.left-neiron{
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  font-size: 36rpx;
+font-weight:15%;
+}
+.dingdan-right{
+    width: 130rpx;
+    height: 200rpx;
+}
+.right-jiage{
+  margin-left: 60rpx;
+  font-size: 38rpx;
+}
+.right-shuliang{
+  margin-left: 86rpx;
+  color:#959595;
+}
+.anniu{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.anniu button{
+  height: 60rpx;
+  margin:10rpx;
+  border-radius: 40%;
+}

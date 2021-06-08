@@ -1,3 +1,4 @@
+const {gettoken,settoken} = require('../../utils/util')
 
 let {getdizhi} = require('../../api/dizhi')
 Page({
@@ -3916,8 +3917,7 @@ Page({
     };
     this.setData({
       areaList
-    }),
-    this.baocundizhi()
+    })
   },
   shouji(e){
     console.log(e)
@@ -3929,6 +3929,26 @@ Page({
       phone:phoneNumber
     })
     
+  },
+  panduan(){
+    let phone = this.data.phone
+    let reg = /^1[3456789]\d{9}$/
+    if(!reg.test(phone)){
+      wx.showToast({
+        title: '手机号码错误',
+      })
+      return;
+    }
+  },
+  bianma(){
+    let youzheng = this.data.youzheng
+    let reg = /^[1-9]\\d{5}$/
+    if(!reg.test(youzheng)){
+      wx.showToast({
+        title: '手机号码错误',
+      })
+      return;
+    }
   },
   dizhi(e){
     console.log(e)
@@ -3978,7 +3998,7 @@ Page({
   },
    async baocundizhi(){
      let res = {
-       user_id:1234,
+       token:gettoken(),
        name:this.data.name,
        tel: this.data.phone,
        province: this.data.sheng,
@@ -3991,6 +4011,7 @@ Page({
      }
     let data = await getdizhi(res)
     console.log(data)
+    
     wx.navigateTo({
       url: '/pages/dizhi/dizhi',
     })
