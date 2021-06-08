@@ -1,4 +1,4 @@
-let {fetchGoodDetail,fetchuserAddress} = require("../../api/goods");
+let {fetchGoodDetail,fetchuserAddress,weixpay} = require("../../api/goods");
 Page({
 
   /**
@@ -117,7 +117,40 @@ Page({
   },
 
   // 微信支付
-  pay(){
-    
+  async pay(){
+    let token = wx.getStorageSync('token');
+    let phone_number = this.data.idDefatul.tel;  // 电话号码
+    let addressAll = this.data.idDefatul.addressAll;  // 省市区
+    let addressDetail = this.data.idDefatul.addressAll; // 详细地址
+    let address = addressAll + addressDetail;  // 加起来的地址
+    let number = 1;
+    let tital_price = this.data.goodDeatail.jumei_price; // 价格
+    let name = this.data.idDefatul.name;  // 姓名
+    let goods_id = this.data.goods_id;
+    console.log(token,phone_number,address,number,tital_price,name,goods_id);
+    let {result} = await weixpay({token,phone_number,address,number,tital_price,name,goods_id});
+    let {nonce_str, timeStamp,prepay_id, paySign, mypackage, sign_type} = result.xml;;
+    wx.requestPayment({
+      nonceStr:nonce_str,
+      package:mypackage,
+      signType:sign_type,
+      paySign:paySign,
+      timeStamp:timeStamp,
+      success:function(res){
+        console.log("支付接口调用成功",res);
+        wx.navigateTo({
+          url: '/pages/menu/menu',
+        })
+      },
+      fail:function(err){
+        console.log('支付接口失败',err);
+        wx.navigateTo({
+          url: '/pages/menu/menu',
+        })
+      }
+    })
+  },
+  fail(err){
+    console.log(err,'err');
   }
 })

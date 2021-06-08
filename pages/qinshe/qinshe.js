@@ -1,4 +1,6 @@
 // pages/qinshe/qinshe.js
+// pages/group/group.js
+// pages/qinshe/qinshe.js
 Page({
 
   /**

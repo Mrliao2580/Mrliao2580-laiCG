@@ -142,4 +142,35 @@ module.exports.tijiao = function(){
       }
     })
   }
+
+
+  // 支付接口
+  module.exports.weixpay = function({token,phone_number,address,number,tital_prive,name,goods_id}){
+    return request({
+      url:"http://lcgpay.zhengxl.show/wxpay",
+      method:"POST",
+      data:{
+        token,
+        phone_number,
+        address,number,
+        tital_prive,
+        name,
+        goods_id,
+        
+      }
+    })
+  }
+
+
+  // 获取订单消息接口
+  module.exports.fetchOrder = function(token){
+    return request({
+      url:"http://lcg.zhengxl.show/api/userorder",
+      method:"POST",
+      data:{
+        token
+      }
+    })
+  }
+  
   

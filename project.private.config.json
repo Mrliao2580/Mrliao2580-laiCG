@@ -13,8 +13,8 @@
     "miniprogram": {
       "list": [
         {
-          "pathName": "pages/goodsDetail/goodsDetail",
           "name": "pages/dizhi/dizhi",
+          "pathName": "pages/goodsDetail/goodsDetail",
           "query": "",
           "scene": null
         },
@@ -51,6 +51,12 @@
         {
           "name": "sub/editAddress",
           "pathName": "subcontract/pages/editAddress/editAddress",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/menu/menu",
+          "pathName": "pages/menu/menu",
           "query": "",
           "scene": null
         }

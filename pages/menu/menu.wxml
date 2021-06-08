@@ -8,3 +8,20 @@
   activeClass="tab-bar-title__selected"
 >
 </mp-tabs>
+<block>
+  <view class="box">
+    <view class="src">
+      <image src="http://p1.jmstatic.com/product/005/256/5256486_std/5256486_200_200.jpg"></image>
+    </view>
+    <view class="content">
+      <view class="title">
+        <text class="name">封啊速度飛快拉薩大家發啦</text>
+        <text class="price">￥365</text>
+      </view>
+      <view class="model">
+        <text class="">撒旦法师打发</text>
+        <text>x1</text>
+      </view>
+    </view>
+  </view>
+</block>

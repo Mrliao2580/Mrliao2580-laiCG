@@ -3,3 +3,40 @@
   height: 90rpx;
   background:#cccc;
 }
+
+.box{
+  display: flex
+}
+
+.box .src {
+  margin-right: 30rpx;
+}
+
+.box .src image{
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.box .content{
+  flex: 1;
+}
+
+.box .content .title{
+  font-size: .875rem;
+  color: #333;
+}
+
+.box .content .title .name{
+  display: inline-block;
+  width: 460rpx;
+}
+
+.box .content .title .price{
+  margin-left: 30rpx;
+}
+
+.box .content .model{
+  font-size: .75rem;
+  color: #999;
+  margin-top: 10  rpx;
+}

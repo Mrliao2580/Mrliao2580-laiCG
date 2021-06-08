@@ -1,4 +1,6 @@
 // pages/group/group.js
+// pages/qinshe/qinshe.js
+// pages/group/group.js
 Page({
 
   /**
@@ -25,6 +27,7 @@ Page({
     console.log(this.data.changeStyle,'changeStyle');
     // console.log(e.currentTarget.dataset.index)
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

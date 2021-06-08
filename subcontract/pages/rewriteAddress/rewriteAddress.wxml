@@ -58,4 +58,7 @@
   <view class="saveLocation delete" bindtap="deleteAdd">
     <text>删除地址</text>
   </view>
+  <view class="saveLocation" bindtap="confirm">
+    <text>保存地址</text>
+  </view>
 </view>

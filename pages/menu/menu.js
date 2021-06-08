@@ -1,3 +1,4 @@
+let {fetchOrder} = require("../../api/goods")
 Page({
   
   data: {
@@ -35,11 +36,10 @@ Page({
       },
     ]
     this.setData({ tabs })
-
+    this._fetchOrder()
 },
 
   onTabClick(e) {
-    console.log(e)
     let index = e.detail.index
     console.log(index)
     this.setData({
@@ -58,5 +58,12 @@ Page({
     wx.navigateTo({
       url: './webview',
     })
+  },
+
+  // 获取订单消息
+  async _fetchOrder(){
+    let token = wx.getStorageSync('token');
+    let data = await fetchOrder(token);
+    console.log(data)
   }
 })

@@ -112,6 +112,11 @@ shopcar(){
     url: '/pages/shop-car/shop-car',
   })
 },
+gobuy(){
+  wx.navigateTo({
+    url: '/pages/dingdan/dingdan',
+  })
+},
   // 点击跳转到商品详情页
   async goodsDetail(){
     let goods_id = this.data.goodData;

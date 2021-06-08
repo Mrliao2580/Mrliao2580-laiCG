@@ -22,8 +22,7 @@ Page({
     goods_id:1,
     id:0,
     tel:1,
-    name:'',
-    index:0
+    name:''
   },
 
   /**
@@ -139,8 +138,8 @@ Page({
   // 收货人内容
   nameContent(e){
     this.setData({
-      nameContent:e.detail.value,
-      name:e.detail.value
+      name:e.detail.value,
+      nameContent:e.detail.value
     })
     // console.log('姓名',this.data.nameContent)
   },
@@ -204,13 +203,14 @@ Page({
   },
 
   // 一进来就发送请求
+  // 点击编辑地址
   async rewriteAdd(){
-    let indexs = this.data.index
+    let indexs = this.data.id
     let token = wx.getStorageSync('token');
     let result = await fetchuserAddress(token);
     let {name,tel,addressAll,addressDetail} = result[indexs-1];
     this.setData({
-      name, // 
+      name,
       tel,
       inputBox:addressAll,
       proContent:addressDetail
@@ -266,8 +266,6 @@ Page({
       }) 
     }
   }
-
-
 
   
 })
