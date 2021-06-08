@@ -1,4 +1,4 @@
-const {gettoken,settoken} = require('../../utils/util')
+const {gettoken,settoken} = require('../../utils/utils')
 
 let {getdizhi} = require('../../api/dizhi')
 Page({

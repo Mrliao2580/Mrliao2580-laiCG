@@ -1,5 +1,7 @@
-let {dindan ,getgoodscar,fetchOrder} = require('../../api/goods')
-let {gettoken} = require('../../utils/util')
+
+let {dindan ,getgoodscar} = require('../../api/goods')
+let {gettoken} = require('../../utils/utils')
+
 Page({
   
   data: {
@@ -39,16 +41,18 @@ Page({
     this.getdingdan();
     // this.quanbu()
 },
+xiugaidizhi(){
+},
  async getdingdan(){
    let token = gettoken()
   let data = await dindan(token)
-  // console.log('dingdan',data)
+  console.log('dingdan',data)
   this.setData({
     dingdan:data
   })
   
  let id = data.map(item=>{
-   return getgoodscar(item.id)
+   return getgoodscar(item.goods_id)
  })
 
  let promiseAll = await Promise.all(id)
@@ -56,13 +60,13 @@ Page({
  console.log('res',res)
  data.map((item,index)=>{
    res.map((v)=>{
+     console.log('v',v);
      if(item.id == v.id){
        v.status = item.status;
        v.number = item.number;
      }
    })
  })
-//  console.log('2',res);
  this.setData({
   //  已经拿到所有的
    suoyou:res
@@ -70,6 +74,7 @@ Page({
 },
 // 点击切换tab
   onTabClick(e) {
+
     let index = e.detail.index
     console.log(index)
     this.setData({
@@ -97,24 +102,19 @@ Page({
     // })
     
     // console.log('suoyou',this.data.suoyou);
+
   },
 
   onChange(e) {
     console.log(e);
-    // console.log(e)
     let index = e.detail.index
-    // console.log('xiabiao',index)
-    // this.getdingdan();
     let dingdan = this.data.suoyou;
-    // console.log('ggg',this.data.suoyou);
     let orderList = []
     dingdan.filter(item=>{
       if(item.status == index){
-        // console.log('a',item)
         return orderList.push(item);
       }
       if(index == 0){
-        // console.log(item);
         return orderList.push(item)
       }
     })
@@ -126,7 +126,7 @@ Page({
   },
   handleClick(e) {
     wx.navigateTo({
-      url:'q',
+      url:'',
     })
   },
 

@@ -1,5 +1,5 @@
 let {morendizhi} = require('../../api/dizhi')
-const {gettoken,settoken} = require('../../utils/util')
+const {gettoken,settoken} = require('../../utils/utils')
 
 Page({
 
@@ -32,6 +32,11 @@ Page({
     this.setData({
     morendizhi:data,
     isDefault
+    })
+  },
+  bianji(e){
+    wx.navigateTo({
+      url: '/subcontract/pages/editAddress/editAddress',
     })
   },
   onChange(event) {
