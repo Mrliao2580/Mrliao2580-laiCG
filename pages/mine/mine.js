@@ -69,6 +69,8 @@ Page({
 
   },
   aaa(){
-    console.log('aaaa')
+   wx.switchTab({
+     url: '/pages/index/index',
+   })
   }
 })

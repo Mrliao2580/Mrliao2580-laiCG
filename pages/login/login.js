@@ -20,7 +20,10 @@ login(){
     async success(res){
       console.log(res)
       console.log(res.code)
+      console.log('code',res.code)
+      wx.setStorageSync('code', res.code)
           let data = await getlogin(res.code)
+          console.log('data',data)
           let token = data.token
           console.log('data',data)
       if(res.code){

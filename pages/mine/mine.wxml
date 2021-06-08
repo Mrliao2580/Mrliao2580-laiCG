@@ -63,7 +63,7 @@
         <!-- <navigator url="/pages/menu/menu?indexa=3"> <view class="pay"> -->
         <navigator  bindtap="pingjia" url="/pages/menu/menu?indexa=3"> <view class="pay">
             <image src="/picture/pjia.png"></image>
-            <view class="tuikuan">待评价</view>
+            <view class="tuikuan" style="color:#878581;">待评价</view>
         </view></navigator>
        <navigator url="/pages/drawback/drawback"> <view class="pay">
             <image src="/picture//jine.png"></image>

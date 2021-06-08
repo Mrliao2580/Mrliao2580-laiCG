@@ -1,6 +1,6 @@
  let {getgoodscar,loadOrder} = require('../../api/goods')
  let {commit} = require('../../api/order')
- let {gettoken} = require('../../utils/util')
+ let {gettoken} = require('../../utils/utils')
 import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog'
 Page({
 
@@ -14,7 +14,7 @@ Page({
     data:[],
     detail:1,
     jiage:'',
-    price:'',
+    price:0,
    
     
   },
@@ -24,7 +24,6 @@ Page({
    */
   onLoad: function (options) {
       this.goodscar()
-      this.loadOrder()
   },
 
  
@@ -78,6 +77,7 @@ plus(){
   },
   // 提交按钮
    async onClickButton(e){
+     console.log(e)
      let token = this.gettoken
      let canshu = { 
        token : token,
@@ -88,19 +88,20 @@ plus(){
        name:"tyf",
        goods_id:1
       };
-     
      let restro = await loadOrder(canshu);
      let data = this.data.data
      console.log(data)
     let array = []
     // 通过filter过滤掉没有被勾选的数据,将勾选上的数据里面的id和数量(detail)组合成一个对象放到一个数组里
-    data.filter(e=>e.checked).map(h => array.push({id:h.id,detail:h.detail}))
-
-    let str = JSON.stringify(array)
-    // console.info(str,JSON.parse(str))
-    wx.navigateTo({
-      url: '/pages/settlement/settlement?data=str',
+    data.filter(e=>e.checked).map(h =>{
+      let id = h.goods_id
+      let detail = h.detail
+      array.push(id)
     })
+    wx.navigateTo({
+      url: `/pages/settlement/settlement?goods_id=${array}`,
+    },
+    )
   },
   shanchu(e){  
     let _this = this
@@ -139,25 +140,20 @@ plus(){
    let detail = event.detail
    console.log('gggg',detail)
   //  价格
-   let jiage  =  ((data[index].detail) * 100) * data[index].jumei_price
-
-  let bianliang = data.some((item,index)=>{
-      return index == dataset.index ? true :false
+  //  let jiage  =  ((data[index].detail) * 100) * data[index].jumei_price
+  data[index].detail = detail
+  let total = 0;
+   data.map((item,index)=>{
+     console.log('utem.detail',item.detail)
+     if(item.checked == true){
+       total += (data[index].detail * data[index].jumei_price) * 100;
+     }
    })
-      if(bianliang==true){
-        if(data[index].checked == true){
-          this.setData({
-            price :this.data.jiage + jiage
-          })
-        }
-          
-   }
-   console.log(jiage)
-   console.log(detail)
-   data[index].detail = event.detail
    this.setData({
+     price: total,
      data
    })
+ console.log('asa',total);
   },
   onChange(event) {
     console.log(event)
@@ -200,11 +196,8 @@ plus(){
    */
   dianji(event){
     let _this = this
-    console.log('点击event',event)
     let detail = event.detail
-    console.log('detail',detail)
     let data = _this.data.data
-    console.log('data',data)
     let totalPrice = 0
     //全选
     if(detail){
@@ -212,18 +205,21 @@ plus(){
         console.info(  e.detail,e.jumei_price , totalPrice)
         totalPrice = e.detail*(e.jumei_price *100) + totalPrice
       })
-      console.info('total '+totalPrice)
       this.setData({
         price: totalPrice
       })
     }else{
       //非全选赋值0
+      this.data.price =''
+      this.setData({
+        price:this.data.price
+      })
     }
-    
     data.map((item,index)=>{
-      console.log(item.detail)
+      console.log('item',item)
       console.log(item.detail)
         item.checked = event.detail
+        
     })
     this.setData({
       checked: event.detail,
@@ -239,6 +235,7 @@ plus(){
    */
   onShow: function () {
     this.goodscar()
+   
   },
 
   /**

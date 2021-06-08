@@ -10,7 +10,7 @@
   </view>
   <view class="btn-box">
     <view class="diqu">{{item.addressDetail}}</view>
-    <button size="mini">编辑</button>
+    <button size="mini" bindtap="bianji">编辑</button>
   </view>
 </view>
 <view class="mrdz">

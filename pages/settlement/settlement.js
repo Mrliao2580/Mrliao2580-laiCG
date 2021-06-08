@@ -18,8 +18,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(options,'options')
+    console.log(options,'options')
     let {goods_id} = options;
+  
     // console.log(goods_id,'goods_id');
     // console.log(goods_id,name,addressAll,addressDetail,tel)
     this.setData({

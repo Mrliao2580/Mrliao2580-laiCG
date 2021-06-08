@@ -22,7 +22,7 @@
       <button size="mini">更多</button>
     </view>
     <view>
-      <button size="mini">修改地址</button>
+      <button size="mini" bindtap="xiugaidizhi">修改地址</button>
       <block wx:if="{{item.status == 1}}">
       <button size="mini">提交订单</button>
       </block>
@@ -67,7 +67,7 @@
       <button size="mini">更多</button>
     </view>
     <view>
-      <button size="mini">修改地址</button>
+      <button size="mini" bindtap="xiugaidizhi">修改地址</button>
       <block wx:if="{{item.status == 1}}">
       <button size="mini">提交订单</button>
       </block>
@@ -112,7 +112,7 @@
       <button size="mini">更多</button>
     </view>
     <view>
-      <button size="mini">修改地址</button>
+      <button size="mini" bindtap="xiugaidizhi">修改地址</button>
       <block wx:if="{{item.status == 1}}">
       <button size="mini">提交订单</button>
       </block>
@@ -157,7 +157,7 @@
       <button size="mini">更多</button>
     </view>
     <view>
-      <button size="mini">修改地址</button>
+      <button size="mini" bindtap="xiugaidizhi">修改地址</button>
       <block wx:if="{{item.status == 1}}">
       <button size="mini">提交订单</button>
       </block>
@@ -202,7 +202,7 @@
       <button size="mini">更多</button>
     </view>
     <view>
-      <button size="mini">修改地址</button>
+      <button size="mini" bindtap="xiugaidizhi">修改地址</button>
       <block wx:if="{{item.status == 1}}">
       <button size="mini">提交订单</button>
       </block>
@@ -226,8 +226,7 @@
       <button size="mini">更多</button>
     </view>
     <view>
-      <button size="mini">修改地址</button>
-      
+      <button size="mini" bindtap="xiugaidizhi">修改地址</button>
     </view>
   </view>
   </view>
