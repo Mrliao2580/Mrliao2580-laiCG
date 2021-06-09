@@ -171,19 +171,11 @@ module.exports.loadOrder = function(canshu){
 
 
   // 支付接口
-  module.exports.weixpay = function({token,phone_number,address,number,tital_prive,name,goods_id}){
+  module.exports.weixpay = function(data){
     return request({
       url:"http://lcgpay.zhengxl.show/wxpay",
       method:"POST",
-      data:{
-        token,
-        phone_number,
-        address,number,
-        tital_prive,
-        name,
-        goods_id,
-        
-      }
+      data
     })
   }
 

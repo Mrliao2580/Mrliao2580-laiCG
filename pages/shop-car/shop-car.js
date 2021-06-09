@@ -24,6 +24,7 @@ Page({
    */
   onLoad: function (options) {
       this.goodscar()
+      console.log('addsdd',this.data.data)
   },
 
  

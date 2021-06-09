@@ -1,30 +1,4 @@
 
-<mp-tabs 
-  tabs="{{tabs}}" 
-  activeTab="{{indexa}}" 
-  swiperClass="weui-tabs-swiper"
-  bindtabclick="onTabClick"
-  bindchange="onChange"
-  activeClass="tab-bar-title__selected"
->
-</mp-tabs>
-<block>
-  <view class="box">
-    <view class="src">
-      <image src="http://p1.jmstatic.com/product/005/256/5256486_std/5256486_200_200.jpg"></image>
-    </view>
-    <view class="content">
-      <view class="title">
-        <text class="name">封啊速度飛快拉薩大家發啦</text>
-        <text class="price">￥365</text>
-      </view>
-      <view class="model">
-        <text class="">撒旦法师打发</text>
-        <text>x1</text>
-      </view>
-    </view>
-  </view>
-</block>
 <van-tabs active="{{ indexa }}" bind:change="onChange">
   <van-tab title="全部">
     <view class="dingdan-box" wx:for="{{orderDetail}}">
@@ -50,7 +24,7 @@
     <view>
       <button size="mini" bindtap="xiugaidizhi">修改地址</button>
       <block wx:if="{{item.status == 1}}">
-      <button size="mini">提交订单</button>
+      <button size="mini" bindtap="pay" data-item="{{item}}">付款</button>
       </block>
       <!-- <button size="mini">提交订单</button> -->
       <block wx:if="{{item.status == 2}}">
@@ -95,7 +69,7 @@
     <view>
       <button size="mini" bindtap="xiugaidizhi">修改地址</button>
       <block wx:if="{{item.status == 1}}">
-      <button size="mini">提交订单</button>
+      <button size="mini" bindtap="pay" data-item="{{item}}">支付</button>
       </block>
       <!-- <button size="mini">提交订单</button> -->
       <block wx:if="{{item.status == 2}}">
@@ -140,7 +114,7 @@
     <view>
       <button size="mini" bindtap="xiugaidizhi">修改地址</button>
       <block wx:if="{{item.status == 1}}">
-      <button size="mini">提交订单</button>
+      <button size="mini" bindtap="pay">提交订单</button>
       </block>
       <!-- <button size="mini">提交订单</button> -->
       <block wx:if="{{item.status == 2}}">
